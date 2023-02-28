@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import ArrowDownIcon from '@heroicons/react/24/solid/ArrowDownIcon';
 import ArrowUpIcon from '@heroicons/react/24/solid/ArrowUpIcon';
-import UsersIcon from '@heroicons/react/24/solid/UsersIcon';
+import { BoltIcon } from "@heroicons/react/24/solid";
 import { Avatar, Card, CardContent, Stack, SvgIcon, Typography } from '@mui/material';
 
-export const OverviewTotalCustomers = (props) => {
+export const OverviewElectricity = (props) => {
   const { difference, positive = false, sx, value } = props;
 
   return (
@@ -21,7 +21,7 @@ export const OverviewTotalCustomers = (props) => {
               color="text.secondary"
               variant="overline"
             >
-              Total Customers
+              Electricity
             </Typography>
             <Typography variant="h4">
               {value}
@@ -29,13 +29,13 @@ export const OverviewTotalCustomers = (props) => {
           </Stack>
           <Avatar
             sx={{
-              backgroundColor: 'success.main',
+              backgroundColor: 'error.main',
               height: 56,
               width: 56
             }}
           >
             <SvgIcon>
-              <UsersIcon />
+              <BoltIcon />
             </SvgIcon>
           </Avatar>
         </Stack>
@@ -52,13 +52,13 @@ export const OverviewTotalCustomers = (props) => {
               spacing={0.5}
             >
               <SvgIcon
-                color={positive ? 'success' : 'error'}
+                color={!positive ? 'success' : 'error'}
                 fontSize="small"
               >
                 {positive ? <ArrowUpIcon /> : <ArrowDownIcon />}
               </SvgIcon>
               <Typography
-                color={positive ? 'success.main' : 'error.main'}
+                color={!positive ? 'success.main' : 'error.main'}
                 variant="body2"
               >
                 {difference}%
@@ -77,10 +77,9 @@ export const OverviewTotalCustomers = (props) => {
   );
 };
 
-OverviewTotalCustomers.propTypes = {
+OverviewElectricity.prototypes = {
   difference: PropTypes.number,
   positive: PropTypes.bool,
-  value: PropTypes.string.isRequired,
-  sx: PropTypes.object
+  sx: PropTypes.object,
+  value: PropTypes.string.isRequired
 };
-

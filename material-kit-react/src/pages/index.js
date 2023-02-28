@@ -2,12 +2,12 @@ import Head from 'next/head';
 import { subDays, subHours } from 'date-fns';
 import { Box, Container, Unstable_Grid2 as Grid } from '@mui/material';
 import { Layout as DashboardLayout } from 'src/layouts/dashboard/layout';
-import { OverviewBudget } from 'src/sections/overview/overview-budget';
+import { OverviewElectricity } from 'src/sections/overview/overview-electricity';
 import { OverviewLatestOrders } from 'src/sections/overview/overview-latest-orders';
 import { OverviewLatestProducts } from 'src/sections/overview/overview-latest-products';
 import { OverviewSales } from 'src/sections/overview/overview-sales';
-import { OverviewTasksProgress } from 'src/sections/overview/overview-tasks-progress';
-import { OverviewTotalCustomers } from 'src/sections/overview/overview-total-customers';
+import { OverviewGas } from 'src/sections/overview/overview-gas';
+import { OverviewWater } from 'src/sections/overview/overview-water';
 import { OverviewTotalProfit } from 'src/sections/overview/overview-total-profit';
 import { OverviewTraffic } from 'src/sections/overview/overview-traffic';
 
@@ -17,7 +17,7 @@ const Page = () => (
   <>
     <Head>
       <title>
-        Overview | Devias Kit
+        Overview
       </title>
     </Head>
     <Box
@@ -37,23 +37,11 @@ const Page = () => (
             sm={6}
             lg={3}
           >
-            <OverviewBudget
+            <OverviewElectricity
               difference={12}
-              positive
-              sx={{ height: '100%' }}
-              value="$24k"
-            />
-          </Grid>
-          <Grid
-            xs={12}
-            sm={6}
-            lg={3}
-          >
-            <OverviewTotalCustomers
-              difference={16}
               positive={false}
               sx={{ height: '100%' }}
-              value="1.6k"
+              value="20k KWH"
             />
           </Grid>
           <Grid
@@ -61,9 +49,23 @@ const Page = () => (
             sm={6}
             lg={3}
           >
-            <OverviewTasksProgress
+            <OverviewWater
+              difference={16}
+              positive={true}
               sx={{ height: '100%' }}
-              value={75.5}
+              value="2k CCF"
+            />
+          </Grid>
+          <Grid
+            xs={12}
+            sm={6}
+            lg={3}
+          >
+            <OverviewGas
+              difference={12}
+              positive={false}
+              sx={{ height: '100%' }}
+              value="120 CCF"
             />
           </Grid>
           <Grid
@@ -83,12 +85,16 @@ const Page = () => (
             <OverviewSales
               chartSeries={[
                 {
-                  name: 'This year',
+                  name: 'Electricity',
                   data: [18, 16, 5, 8, 3, 14, 14, 16, 17, 19, 18, 20]
                 },
                 {
-                  name: 'Last year',
+                  name: 'Water',
                   data: [12, 11, 4, 6, 2, 9, 9, 10, 11, 12, 13, 13]
+                },
+                {
+                  name: 'Gas',
+                  data: [5, 6, 4, 6, 3, 7, 9, 7, 5, 5, 8, 9]
                 }
               ]}
               sx={{ height: '100%' }}
@@ -101,7 +107,7 @@ const Page = () => (
           >
             <OverviewTraffic
               chartSeries={[63, 15, 22]}
-              labels={['Desktop', 'Tablet', 'Phone']}
+              labels={['Electricity', 'Water', 'Gas']}
               sx={{ height: '100%' }}
             />
           </Grid>
