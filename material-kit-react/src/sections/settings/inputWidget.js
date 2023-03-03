@@ -8,8 +8,6 @@ import {
   Card,
   CardActions,
   CardContent,
-  CardHeader,
-  Divider,
   Grid,
   Stack,
   SvgIcon,
@@ -19,8 +17,9 @@ import {
 
 export const InputWidget = () => {
   const [values, setValues] = useState({
-    password: '',
-    confirm: ''
+    electric: '',
+    gas: '',
+    water: ''
   });
 
   const handleChange = useCallback(
@@ -43,32 +42,28 @@ export const InputWidget = () => {
   return (
     <form onSubmit={handleSubmit}>
       <Card>
-        <Stack
-        spacing={3}
-        alignItems="flex-start"
-        direction="row"
-        justifyContent="space-between">
-        </Stack>
         <CardContent>
           <Stack
           spacing={3}
-          alignItems="flex-start"
+          alignItems="flex-end"
           direction="row"
-          justifyContent="space-between"
+          justifyContent="space-bewteen"
+          paddingLeft={"3%"}
           >
             <Grid
             container
+            sx={{height: 200}}
             spacing={3}
             direction="column"
             alignItems="center"
-            justifyContent="center"
-            border={"-moz-initial"}
-            borderColor={"black"}>
+            justifyContent="space-between"
+            marginTop={"4%"}
+            >
             <Avatar
             sx={{
               backgroundColor: 'error.main',
-              height: 70,
-              width: 70
+              height: 100,
+              width: 100
             }}
             >
                 <SvgIcon><BoltIcon /></SvgIcon>
@@ -84,16 +79,18 @@ export const InputWidget = () => {
             </Grid>
             <Grid
             container
+            sx={{height: 200}}
             spacing={3}
             direction="column"
             alignItems="center"
-            justifyContent="center">
+            justifyContent="space-between"
+            marginTop={"4%"}>
                 <Avatar
                 alignItems ="center"
                 sx={{
                 backgroundColor: 'warning.main',
-                height: 70,
-                width: 70
+                height: 100,
+                width: 100
                 }}
                 >
                     <SvgIcon><FireIcon /></SvgIcon>
@@ -104,20 +101,22 @@ export const InputWidget = () => {
                 name="gas"
                 onChange={handleChange}
                 type="gas"
-                value={values.water}
+                value={values.gas}
                 />
             </Grid>
             <Grid
             container
+            sx={{height: 200}}
             spacing={3}
             direction="column"
             alignItems="center"
-            justifyContent="center">
+            justifyContent="space-between"
+            marginTop={"4%"}>
                 <Avatar
                     sx={{
                     backgroundColor: 'success.main',
-                    height: 70,
-                    width: 70
+                    height: 100,
+                    width: 100
                     }}
                     >
                         <SvgIcon><BeakerIcon /></SvgIcon>
@@ -131,13 +130,13 @@ export const InputWidget = () => {
                 value={values.water}
                 />
             </Grid>
-          </Stack>
-        </CardContent>
+        </Stack>
         <CardActions sx={{ justifyContent: 'flex-end' }}>
           <Button variant="contained">
             Enter
           </Button>
         </CardActions>
+        </CardContent>
       </Card>
     </form>
   );
