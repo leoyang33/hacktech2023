@@ -10,7 +10,9 @@ import PublicIcon from '@mui/icons-material/Public';
 import LeaderboardIcon from '@mui/icons-material/Leaderboard';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import UploadFileIcon from '@mui/icons-material/UploadFile';
+import InfoIcon from '@mui/icons-material/Info';
 import { SvgIcon } from "@mui/material";
+import { Info } from "@mui/icons-material";
 
 export const items = [
   {
@@ -46,6 +48,15 @@ export const items = [
     icon: (
       <SvgIcon fontSize="small">
         <UploadFileIcon />
+      </SvgIcon>
+    ),
+  },
+  {
+    title: "About Us",
+    path: "/about",
+    icon: (
+      <SvgIcon fontSize="small">
+        <InfoIcon />
       </SvgIcon>
     ),
   },
