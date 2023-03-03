@@ -115,7 +115,6 @@ export default function Map() {
     setqAbbreviation(quizArray[progNum].attributes.abbreviation);
   }, [quizArray, progNum]);
 
-  // 1回目は緑、2回目以降は黄色にする, 正解したかを返す
   const fillWhenCorrect = (guess, failed) => {
     let fillColor = "#2ECC71";
     if (failed) fillColor = "#F4D03F";
