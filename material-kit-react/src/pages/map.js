@@ -237,19 +237,19 @@ export default function Map() {
 
   return (
     <div>
-      <Typography variant="h3">US 50 states Sign/Plate Quiz</Typography>
-      <Box sx={{ flexGrow: 1 }}>
+      <Typography variant="h3">US map</Typography>
+      {/* <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
           <Grid xs={4}>
             {condition.ongoing && qAbbreviation ? (
               <MyPaper>
-                {/* <BoxButtonSub onClick={resetSession}>Reset</BoxButtonSub>
-                <BoxButtonSub2 onClick={onSkip}>Show Answer</BoxButtonSub2> */}
+                <BoxButtonSub onClick={resetSession}>Reset</BoxButtonSub>
+                <BoxButtonSub2 onClick={onSkip}>Show Answer</BoxButtonSub2>
               </MyPaper>
             ) : (
               <MyPaper>
-                {/* <BoxButton onClick={startHighway}>Highway Sign</BoxButton> */}
-                {/* <BoxButton onClick={startLicense}>License Plate</BoxButton> */}
+                <BoxButton onClick={startHighway}>Highway Sign</BoxButton>
+                <BoxButton onClick={startLicense}>License Plate</BoxButton>
               </MyPaper>
             )}
           </Grid>
@@ -283,7 +283,7 @@ export default function Map() {
             </MyPaper>
           </Grid>
         </Grid>
-      </Box>
+      </Box> */}
 
       {/* {msg} */}
       <USAMap customize={colorMap} onClick={onMapClick} />
