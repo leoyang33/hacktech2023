@@ -2,41 +2,41 @@
     "data" : [
         {
           "id": 1,
-          "waterUsage": 2466.608304,
-          "gasUsage": 47269.85935,
-          "electricUsage": 759.1922318,
+          "waterUsage": 1900.608304,
+          "gasUsage": 47000.85935,
+          "electricUsage": 730.1922318,
           "month": 1,
           "year": 2023
         },
         {
           "id": 1,
-          "waterUsage": 2478.302191,
-          "gasUsage": 47344.43365,
-          "electricUsage": 778.5287185,
+          "waterUsage": 1890.302191,
+          "gasUsage": 47001.43365,
+          "electricUsage": 734.5287185,
           "month": 2,
           "year": 2023
         },
         {
           "id": 1,
-          "waterUsage": 2470.595553,
-          "gasUsage": 47415.68168,
+          "waterUsage": 1965.595553,
+          "gasUsage": 46980.68168,
           "electricUsage": 731.5167772,
           "month": 3,
           "year": 2023
         },
         {
           "id": 1,
-          "waterUsage": 2457.394608,
-          "gasUsage": 47346.68387,
-          "electricUsage": 760.5665227,
+          "waterUsage": 1880.394608,
+          "gasUsage": 46500.68387,
+          "electricUsage": 729.5665227,
           "month": 4,
           "year": 2023
         },
         {
           "id": 1,
           "waterUsage": 2506.157358,
-          "gasUsage": 47497.15202,
-          "electricUsage": 777.8482763,
+          "gasUsage": 46480.15202,
+          "electricUsage": 729.8482763,
           "month": 5,
           "year": 2023
         },
