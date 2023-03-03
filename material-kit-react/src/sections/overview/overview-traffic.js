@@ -1,7 +1,4 @@
 import PropTypes from 'prop-types';
-import ComputerDesktopIcon from '@heroicons/react/24/solid/ComputerDesktopIcon';
-import DeviceTabletIcon from '@heroicons/react/24/solid/DeviceTabletIcon';
-import PhoneIcon from '@heroicons/react/24/solid/PhoneIcon';
 import { BoltIcon } from "@heroicons/react/24/solid";
 import { FireIcon } from "@heroicons/react/24/solid";
 import { BeakerIcon } from "@heroicons/react/24/solid";
@@ -32,7 +29,7 @@ const useChartOptions = (labels) => {
       theme.palette.warning.main
     ],
     dataLabels: {
-      enabled: false
+      enabled: true
     },
     labels,
     legend: {
@@ -130,7 +127,7 @@ export const OverviewTraffic = (props) => {
                   color="text.secondary"
                   variant="subtitle2"
                 >
-                  {item}%
+                  ${item}
                 </Typography>
               </Box>
             );
