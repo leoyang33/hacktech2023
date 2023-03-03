@@ -83,7 +83,7 @@ export const LeaderboardNeighbourhoodLeaderboard = (props) => {
                 <TableCell>
                   Name
                 </TableCell>
-                <TableCell>
+                <TableCell align={'left'}>
                   <TableSortLabel
                     active={"gas-usage" in sortingRules}
                     direction={"gas-usage" in sortingRules ? sortingRules["gas-usage"] : "asc"} 
@@ -120,7 +120,7 @@ export const LeaderboardNeighbourhoodLeaderboard = (props) => {
                     <TableCell>
                       {data.id == 1 ? <b>{data.name}</b> : data.name}
                     </TableCell>
-                    <TableCell>
+                    <TableCell align='center' >
                       {data.id == 1 ? <b>{data['gas-usage']}</b> : data['gas-usage']}
                     </TableCell>
                     <TableCell sortDirection="desc">
