@@ -33,7 +33,7 @@ export const LeaderboardNeighbourhoodLeaderboard = (props) => {
 
   const formatData = (usersInfo, dataInfo) => {
     const pin = 91125;
-    const usersInPin = usersInfo.filter(user => user.zipcode == pin);
+    const usersInPin = usersInfo.filter(user => user.zipCode == pin);
     const validData = dataInfo.filter(data => data.month == 1 && data.year == 2023)
 
     let filteredData = [];
@@ -44,7 +44,12 @@ export const LeaderboardNeighbourhoodLeaderboard = (props) => {
         }
     }
 
-    filteredData.sort((a, b) => a['water-usage'] - b['water-usage']);
+    filteredData.sort((a, b) => a['waterUsage'] - b['waterUsage']);
+    for (var i in filteredData) {
+      filteredData[i].rank = (Number(i) + 1);
+    }
+
+    console.log(filteredData);
     return filteredData;
   }
 
@@ -65,6 +70,16 @@ export const LeaderboardNeighbourhoodLeaderboard = (props) => {
     let cpy = [...toShowData];
 
     cpy.sort((a, b) => direction == "asc" ? asc(a[col], b[col]) : dsc(a[col], b[col]));
+
+    if (direction == "asc") {
+      for (var i in cpy) {
+        cpy[i].rank = (Number(i) + 1);
+      }
+    } else {
+      for (var i in cpy) {
+        cpy[i].rank = (cpy.length - Number(i));
+      }
+    }
     setToShowData(cpy);
     var d = {};
     d[col] = direction;
@@ -72,40 +87,47 @@ export const LeaderboardNeighbourhoodLeaderboard = (props) => {
     console.log(sortingRules);
   }
 
+  const formatDP = (num) => {
+    return Number(num).toFixed(0);
+  }
+
   return (
     <Card sx={sx}>
       <CardHeader title="Neighborhood Leaderboard" />
       <Scrollbar sx={{ flexGrow: 1 }}>
-        <Box sx={{ minWidth: 800 }}>
+        <Box>
           <Table>
             <TableHead>
               <TableRow>
                 <TableCell>
+                  Rank
+                </TableCell>
+                <TableCell>
                   Name
                 </TableCell>
-                <TableCell align={'left'}>
+                <TableCell align={'right'}>
                   <TableSortLabel
-                    active={"gas-usage" in sortingRules}
-                    direction={"gas-usage" in sortingRules ? sortingRules["gas-usage"] : "asc"} 
-                    onClick={() => onSortData("gas-usage")}>
+                    active={"gasUsage" in sortingRules}
+                    direction={"gasUsage" in sortingRules ? sortingRules["gasUsage"] : "asc"} 
+                    onClick={() => onSortData("gasUsage")}>
                   </TableSortLabel>
-                  Gas Usage
+                  Gas (cu. ft)
                 </TableCell>
-                <TableCell>
+                <TableCell align='right'>
                   <TableSortLabel
-                    active={"water-usage" in sortingRules}
-                    direction={"water-usage" in sortingRules ? sortingRules["water-usage"] : "asc"} 
-                    onClick={() => onSortData("water-usage")}>
+                    active={"waterUsage" in sortingRules}
+                    direction={"waterUsage" in sortingRules ? sortingRules["waterUsage"] : "asc"} 
+                    onClick={() => onSortData("waterUsage")}>
                   </TableSortLabel>
-                  Water Usage
+                  Water (gal)
                 </TableCell>
-                <TableCell>
+                <TableCell align='right'>
                   <TableSortLabel
-                    active={"electric-usage" in sortingRules}
-                    direction={"electric-usage" in sortingRules ? sortingRules["electric-usage"] : "asc"} 
-                    onClick={() => onSortData("electric-usage")}>
+                    active={"electricUsage" in sortingRules}
+                    direction={"electricUsage" in sortingRules ? sortingRules["electricUsage"] : "asc"} 
+                    onClick={() => onSortData("electricUsage")}>
                   </TableSortLabel>
-                  Electricity Usage
+                  Electricity (kwh)
                 </TableCell>
               </TableRow>
             </TableHead>
@@ -118,16 +140,19 @@ export const LeaderboardNeighbourhoodLeaderboard = (props) => {
                     key={data.id}
                   >
                     <TableCell>
-                      {data.id == 1 ? <b>{data.name}</b> : data.name}
-                    </TableCell>
-                    <TableCell align='center' >
-                      {data.id == 1 ? <b>{data['gas-usage']}</b> : data['gas-usage']}
-                    </TableCell>
-                    <TableCell sortDirection="desc">
-                      {data.id == 1 ? <b>{data['water-usage']}</b> : data['water-usage']}
+                      {data.id == 1 ? <b>{data.rank}</b> : data.rank}
                     </TableCell>
                     <TableCell>
-                      {data.id == 1 ? <b>{data['electric-usage']}</b> : data['electric-usage']}
+                      {data.id == 1 ? <b>{data.name}</b> : data.name}
+                    </TableCell>
+                    <TableCell align='right' >
+                      {data.id == 1 ? <b>{formatDP(data.gasUsage)}</b> : formatDP(data.gasUsage)}
+                    </TableCell>
+                    <TableCell align='right'>
+                      {data.id == 1 ? <b>{formatDP(data.waterUsage)}</b> : formatDP(data.waterUsage)}
+                    </TableCell>
+                    <TableCell align='right'>
+                      {data.id == 1 ? <b>{formatDP(data.electricUsage)}</b> : formatDP(data.electricUsage)}
                     </TableCell>
                   </TableRow>
                   
