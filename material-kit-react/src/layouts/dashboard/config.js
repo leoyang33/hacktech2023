@@ -88,6 +88,15 @@ export const items = [
       <SvgIcon fontSize="small">
         <XCircleIcon />
       </SvgIcon>
-    ),
+    )
   },
+  {
+    title: 'Map',
+    path: '/map',
+    icon: (
+      <SvgIcon fontSize="small">
+        <XCircleIcon />
+      </SvgIcon>
+    )
+  }
 ];
