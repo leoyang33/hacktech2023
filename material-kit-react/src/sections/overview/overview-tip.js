@@ -60,7 +60,7 @@ export const OverviewTip = (props) => {
               {iconMap[type]}
             </Avatar>
           </Grid>
-          <Grid container>
+          <Grid container paddingTop={5}>
             <Typography
               color="text.primary"
               variant="body1"
@@ -69,7 +69,7 @@ export const OverviewTip = (props) => {
               {tips[page-1]}
             </Typography>
           </Grid>
-          <Grid container justifyContent='space-between'>
+          <Grid container justifyContent='space-between' paddingTop={5}>
             <Pagination count={tips.length} page={page} 
                     onChange={handleChange} siblingCount={0} boundaryCount={0}/>
             <Grid container justifyContent='flex-end'>

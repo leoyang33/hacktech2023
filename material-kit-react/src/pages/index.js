@@ -253,7 +253,7 @@ const Page = () => (
               "Tip 3"
               ]}
               type="Gas"
-              sx={{ height: '100%' }}
+              sx={{ height: '35vh' }}
             />
           </Grid>
           <Grid xs={4}>
