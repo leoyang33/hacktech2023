@@ -1,0 +1,204 @@
+{
+    "data" : [
+        {
+          "id": 1,
+          "name": "Jay Dong",
+          "phone": "123-456-789",
+          "zipCode": 91125,
+          "city": "Pasadena",
+          "state": "California",
+          "houseMembers": 2,
+          "houseSize": "small"
+        },
+        {
+          "id": 2,
+          "name": "Krish Mehta",
+          "phone": "123-456-790",
+          "zipCode": 91125,
+          "city": "Pasadena",
+          "state": "California",
+          "houseMembers": 2,
+          "houseSize": "small"
+        },
+        {
+          "id": 3,
+          "name": "Leo Yang",
+          "phone": "123-456-791",
+          "zipCode": 91125,
+          "city": "Pasadena",
+          "state": "California",
+          "houseMembers": 2,
+          "houseSize": "small"
+        },
+        {
+          "id": 4,
+          "name": "Vivian Zhang",
+          "phone": "123-456-792",
+          "zipCode": 91125,
+          "city": "Pasadena",
+          "state": "California",
+          "houseMembers": 2,
+          "houseSize": "small"
+        },
+        {
+          "id": 5,
+          "name": "Rickey Levine",
+          "phone": "123-456-793",
+          "zipCode": 91125,
+          "city": "Pasadena",
+          "state": "California",
+          "houseMembers": 2,
+          "houseSize": "small"
+        },
+        {
+          "id": 6,
+          "name": "Cecil French",
+          "phone": "123-456-794",
+          "zipCode": 91125,
+          "city": "Pasadena",
+          "state": "California",
+          "houseMembers": 4,
+          "houseSize": "medium"
+        },
+        {
+          "id": 7,
+          "name": "Fred McCarty",
+          "phone": "123-456-795",
+          "zipCode": 91125,
+          "city": "Pasadena",
+          "state": "California",
+          "houseMembers": 4,
+          "houseSize": "medium"
+        },
+        {
+          "id": 8,
+          "name": "Maribel Stark",
+          "phone": "123-456-796",
+          "zipCode": 91125,
+          "city": "Pasadena",
+          "state": "California",
+          "houseMembers": 4,
+          "houseSize": "medium"
+        },
+        {
+          "id": 9,
+          "name": "Neal Russel",
+          "phone": "123-456-797",
+          "zipCode": 91125,
+          "city": "Pasadena",
+          "state": "California",
+          "houseMembers": 4,
+          "houseSize": "medium"
+        },
+        {
+          "id": 10,
+          "name": "Jackie Conway",
+          "phone": "123-456-798",
+          "zipCode": 91125,
+          "city": "Pasadena",
+          "state": "California",
+          "houseMembers": 4,
+          "houseSize": "medium"
+        },
+        {
+          "id": 11,
+          "name": "Jorge Irwin",
+          "phone": "123-456-839",
+          "zipCode": 91265,
+          "city": "Irvine",
+          "state": "California",
+          "houseMembers": 2,
+          "houseSize": "small"
+        },
+        {
+          "id": 12,
+          "name": "Patricia Lyons",
+          "phone": "123-456-840",
+          "zipCode": 91265,
+          "city": "Irvine",
+          "state": "California",
+          "houseMembers": 2,
+          "houseSize": "small"
+        },
+        {
+          "id": 13,
+          "name": "Dwayne Carpenter",
+          "phone": "123-456-841",
+          "zipCode": 91265,
+          "city": "Irvine",
+          "state": "California",
+          "houseMembers": 2,
+          "houseSize": "small"
+        },
+        {
+          "id": 14,
+          "name": "Will Stark",
+          "phone": "123-456-842",
+          "zipCode": 91265,
+          "city": "Irvine",
+          "state": "California",
+          "houseMembers": 2,
+          "houseSize": "small"
+        },
+        {
+          "id": 15,
+          "name": "Kenny Kelly",
+          "phone": "123-456-843",
+          "zipCode": 91265,
+          "city": "Irvine",
+          "state": "California",
+          "houseMembers": 2,
+          "houseSize": "small"
+        },
+        {
+          "id": 16,
+          "name": "Emmanuel Lopez",
+          "phone": "123-456-844",
+          "zipCode": 91265,
+          "city": "Irvine",
+          "state": "California",
+          "houseMembers": 4,
+          "houseSize": "medium"
+        },
+        {
+          "id": 17,
+          "name": "Delia McKinney",
+          "phone": "123-456-845",
+          "zipCode": 91265,
+          "city": "Irvine",
+          "state": "California",
+          "houseMembers": 4,
+          "houseSize": "medium"
+        },
+        {
+          "id": 18,
+          "name": "Loretta Crowley",
+          "phone": "123-456-846",
+          "zipCode": 91265,
+          "city": "Irvine",
+          "state": "California",
+          "houseMembers": 4,
+          "houseSize": "medium"
+        },
+        {
+          "id": 19,
+          "name": "Cory Gentry",
+          "phone": "123-456-847",
+          "zipCode": 91265,
+          "city": "Irvine",
+          "state": "California",
+          "houseMembers": 4,
+          "houseSize": "medium"
+        },
+        {
+          "id": 20,
+          "name": "Mathew Freeman",
+          "phone": "123-456-848",
+          "zipCode": 91265,
+          "city": "Irvine",
+          "state": "California",
+          "houseMembers": 4,
+          "houseSize": "medium"
+        }
+      ]
+}
