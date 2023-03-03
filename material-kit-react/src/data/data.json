@@ -2,513 +2,193 @@
     "data" : [
         {
           "id": 1,
-          "water-usage": 2474.455584,
-          "gas-usage": 47336.41969,
-          "electric-usage": 767.1600748,
+          "waterUsage": 1900.608304,
+          "gasUsage": 47000.85935,
+          "electricUsage": 730.1922318,
           "month": 1,
           "year": 2023
         },
         {
           "id": 1,
-          "water-usage": 2472.155151,
-          "gas-usage": 47383.31503,
-          "electric-usage": 788.5173681,
+          "waterUsage": 1890.302191,
+          "gasUsage": 47001.43365,
+          "electricUsage": 734.5287185,
           "month": 2,
           "year": 2023
         },
         {
           "id": 1,
-          "water-usage": 2491.870405,
-          "gas-usage": 47316.95943,
-          "electric-usage": 764.7652239,
+          "waterUsage": 1965.595553,
+          "gasUsage": 46980.68168,
+          "electricUsage": 731.5167772,
           "month": 3,
           "year": 2023
         },
         {
           "id": 1,
-          "water-usage": 2449.318662,
-          "gas-usage": 47451.67991,
-          "electric-usage": 760.2873238,
+          "waterUsage": 1880.394608,
+          "gasUsage": 46500.68387,
+          "electricUsage": 729.5665227,
           "month": 4,
           "year": 2023
         },
         {
           "id": 1,
-          "water-usage": 2512.691998,
-          "gas-usage": 47633.72343,
-          "electric-usage": 757.3471551,
+          "waterUsage": 2506.157358,
+          "gasUsage": 46480.15202,
+          "electricUsage": 729.8482763,
           "month": 5,
           "year": 2023
         },
         {
           "id": 2,
-          "water-usage": 2513.058909,
-          "gas-usage": 47224.20009,
-          "electric-usage": 796.8973464,
+          "waterUsage": 2499.498073,
+          "gasUsage": 47575.87976,
+          "electricUsage": 767.1444677,
           "month": 1,
           "year": 2023
         },
         {
           "id": 3,
-          "water-usage": 2499.760795,
-          "gas-usage": 47511.73504,
-          "electric-usage": 786.276505,
+          "waterUsage": 2485.76435,
+          "gasUsage": 47272.17996,
+          "electricUsage": 794.4781577,
           "month": 1,
           "year": 2023
         },
         {
           "id": 4,
-          "water-usage": 2518.74282,
-          "gas-usage": 47599.71754,
-          "electric-usage": 783.3045641,
+          "waterUsage": 2475.68186,
+          "gasUsage": 47421.95356,
+          "electricUsage": 766.85806,
           "month": 1,
           "year": 2023
         },
         {
           "id": 5,
-          "water-usage": 2462.674051,
-          "gas-usage": 47636.24272,
-          "electric-usage": 780.507669,
+          "waterUsage": 2485.638846,
+          "gasUsage": 47385.03113,
+          "electricUsage": 775.9625544,
           "month": 1,
           "year": 2023
         },
         {
           "id": 6,
-          "water-usage": 2515.764799,
-          "gas-usage": 47543.82913,
-          "electric-usage": 778.9819924,
+          "waterUsage": 2501.876052,
+          "gasUsage": 47378.07514,
+          "electricUsage": 789.2560685,
           "month": 1,
           "year": 2023
         },
         {
           "id": 7,
-          "water-usage": 2487.957559,
-          "gas-usage": 47568.8772,
-          "electric-usage": 760.844412,
+          "waterUsage": 2500.299054,
+          "gasUsage": 47347.51643,
+          "electricUsage": 770.5706927,
           "month": 1,
           "year": 2023
         },
         {
           "id": 8,
-          "water-usage": 2492.187494,
-          "gas-usage": 47345.36851,
-          "electric-usage": 747.633536,
+          "waterUsage": 2475.255407,
+          "gasUsage": 47451.71084,
+          "electricUsage": 770.8002386,
           "month": 1,
           "year": 2023
         },
         {
           "id": 9,
-          "water-usage": 2499.186678,
-          "gas-usage": 47429.43406,
-          "electric-usage": 765.601477,
+          "waterUsage": 2525.308634,
+          "gasUsage": 47358.49564,
+          "electricUsage": 761.3816197,
           "month": 1,
           "year": 2023
         },
         {
           "id": 10,
-          "water-usage": 2491.398365,
-          "gas-usage": 47548.42871,
-          "electric-usage": 761.8191491,
+          "waterUsage": 2420.883589,
+          "gasUsage": 47469.98893,
+          "electricUsage": 776.0661998,
           "month": 1,
           "year": 2023
         },
         {
           "id": 11,
-          "water-usage": 2515.00295,
-          "gas-usage": 47325.90272,
-          "electric-usage": 749.8811497,
+          "waterUsage": 2026.51603,
+          "gasUsage": 47692.77858,
+          "electricUsage": 824.6538652,
           "month": 1,
           "year": 2023
         },
         {
           "id": 12,
-          "water-usage": 2454.183942,
-          "gas-usage": 47540.00326,
-          "electric-usage": 748.4335528,
+          "waterUsage": 1955.901161,
+          "gasUsage": 47272.44457,
+          "electricUsage": 803.0292017,
           "month": 1,
           "year": 2023
         },
         {
           "id": 13,
-          "water-usage": 2501.715793,
-          "gas-usage": 47560.35868,
-          "electric-usage": 751.6632581,
+          "waterUsage": 2018.356942,
+          "gasUsage": 47386.46369,
+          "electricUsage": 759.0402575,
           "month": 1,
           "year": 2023
         },
         {
           "id": 14,
-          "water-usage": 2527.017064,
-          "gas-usage": 47431.00857,
-          "electric-usage": 767.7910181,
+          "waterUsage": 2018.669225,
+          "gasUsage": 47369.60095,
+          "electricUsage": 781.805244,
           "month": 1,
           "year": 2023
         },
         {
           "id": 15,
-          "water-usage": 2489.754245,
-          "gas-usage": 47731.37797,
-          "electric-usage": 778.5074264,
+          "waterUsage": 1973.849373,
+          "gasUsage": 47404.0717,
+          "electricUsage": 781.8482462,
           "month": 1,
           "year": 2023
         },
         {
           "id": 16,
-          "water-usage": 2486.152539,
-          "gas-usage": 47356.30204,
-          "electric-usage": 776.4224604,
+          "waterUsage": 2019.032099,
+          "gasUsage": 47336.99341,
+          "electricUsage": 730.2129616,
           "month": 1,
           "year": 2023
         },
         {
           "id": 17,
-          "water-usage": 2489.315491,
-          "gas-usage": 47359.98603,
-          "electric-usage": 772.4610331,
+          "waterUsage": 2005.799178,
+          "gasUsage": 47394.95249,
+          "electricUsage": 775.4841834,
           "month": 1,
           "year": 2023
         },
         {
           "id": 18,
-          "water-usage": 2511.307555,
-          "gas-usage": 47573.895,
-          "electric-usage": 777.3043537,
+          "waterUsage": 2006.003124,
+          "gasUsage": 47380.55575,
+          "electricUsage": 835.1667928,
           "month": 1,
           "year": 2023
         },
         {
           "id": 19,
-          "water-usage": 2475.204774,
-          "gas-usage": 47452.75767,
-          "electric-usage": 771.7204315,
+          "waterUsage": 1978.323834,
+          "gasUsage": 47287.46577,
+          "electricUsage": 782.8532451,
           "month": 1,
           "year": 2023
         },
         {
           "id": 20,
-          "water-usage": 2437.365584,
-          "gas-usage": 47322.4942,
-          "electric-usage": 769.4682186,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 21,
-          "water-usage": 2471.558775,
-          "gas-usage": 47396.3278,
-          "electric-usage": 770.7324015,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 22,
-          "water-usage": 2493.815073,
-          "gas-usage": 47318.67963,
-          "electric-usage": 742.821105,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 23,
-          "water-usage": 2465.273261,
-          "gas-usage": 47544.81066,
-          "electric-usage": 766.7782732,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 24,
-          "water-usage": 2465.103125,
-          "gas-usage": 47328.80364,
-          "electric-usage": 760.3423969,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 25,
-          "water-usage": 2490.278617,
-          "gas-usage": 47568.2688,
-          "electric-usage": 775.0759452,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 26,
-          "water-usage": 2418.509178,
-          "gas-usage": 47428.6232,
-          "electric-usage": 797.5486131,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 27,
-          "water-usage": 2465.862355,
-          "gas-usage": 47477.40323,
-          "electric-usage": 787.2857234,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 28,
-          "water-usage": 2453.744464,
-          "gas-usage": 47467.25689,
-          "electric-usage": 825.5938774,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 29,
-          "water-usage": 2498.341708,
-          "gas-usage": 47299.78193,
-          "electric-usage": 773.5658546,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 30,
-          "water-usage": 2545.138668,
-          "gas-usage": 47367.1651,
-          "electric-usage": 810.1118632,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 31,
-          "water-usage": 2017.20039,
-          "gas-usage": 47405.3825,
-          "electric-usage": 823.5978708,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 32,
-          "water-usage": 2005.169662,
-          "gas-usage": 47422.47556,
-          "electric-usage": 828.9106726,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 33,
-          "water-usage": 1994.517534,
-          "gas-usage": 47318.29088,
-          "electric-usage": 769.9413412,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 34,
-          "water-usage": 2020.025303,
-          "gas-usage": 47452.71885,
-          "electric-usage": 865.4886936,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 35,
-          "water-usage": 2026.850721,
-          "gas-usage": 47566.6215,
-          "electric-usage": 757.726701,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 36,
-          "water-usage": 2065.974965,
-          "gas-usage": 47464.82815,
-          "electric-usage": 795.3194129,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 37,
-          "water-usage": 2048.860365,
-          "gas-usage": 47385.04823,
-          "electric-usage": 871.3847552,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 38,
-          "water-usage": 1998.812688,
-          "gas-usage": 47311.70098,
-          "electric-usage": 768.5876714,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 39,
-          "water-usage": 2037.173068,
-          "gas-usage": 47541.5945,
-          "electric-usage": 780.2033609,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 40,
-          "water-usage": 1980.916622,
-          "gas-usage": 47403.21457,
-          "electric-usage": 790.9022133,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 41,
-          "water-usage": 2013.876713,
-          "gas-usage": 47478.31189,
-          "electric-usage": 813.2618687,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 42,
-          "water-usage": 2025.581985,
-          "gas-usage": 47452.80887,
-          "electric-usage": 775.0086226,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 43,
-          "water-usage": 1985.526919,
-          "gas-usage": 47348.39162,
-          "electric-usage": 788.8766087,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 44,
-          "water-usage": 2027.365521,
-          "gas-usage": 47632.08325,
-          "electric-usage": 799.7347178,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 45,
-          "water-usage": 2003.47306,
-          "gas-usage": 47448.09401,
-          "electric-usage": 780.8386934,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 46,
-          "water-usage": 1990.509752,
-          "gas-usage": 47313.32266,
-          "electric-usage": 843.6719809,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 47,
-          "water-usage": 1991.924991,
-          "gas-usage": 47432.26592,
-          "electric-usage": 792.4362395,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 48,
-          "water-usage": 2027.084922,
-          "gas-usage": 47458.11996,
-          "electric-usage": 800.0134829,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 49,
-          "water-usage": 1983.416023,
-          "gas-usage": 47451.71467,
-          "electric-usage": 817.302785,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 50,
-          "water-usage": 1993.535179,
-          "gas-usage": 47555.69118,
-          "electric-usage": 780.2815137,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 51,
-          "water-usage": 2011.654055,
-          "gas-usage": 47434.68912,
-          "electric-usage": 769.7808719,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 52,
-          "water-usage": 1973.733759,
-          "gas-usage": 47386.54639,
-          "electric-usage": 805.3286602,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 53,
-          "water-usage": 1964.263736,
-          "gas-usage": 47435.53966,
-          "electric-usage": 786.6961263,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 54,
-          "water-usage": 1934.164397,
-          "gas-usage": 47501.47809,
-          "electric-usage": 802.927188,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 55,
-          "water-usage": 2034.508248,
-          "gas-usage": 47370.54941,
-          "electric-usage": 821.5009209,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 56,
-          "water-usage": 2009.890142,
-          "gas-usage": 47423.75664,
-          "electric-usage": 813.5018972,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 57,
-          "water-usage": 2016.244095,
-          "gas-usage": 47454.25948,
-          "electric-usage": 807.611116,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 58,
-          "water-usage": 1967.923385,
-          "gas-usage": 47675.33524,
-          "electric-usage": 777.7328231,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 59,
-          "water-usage": 2022.611443,
-          "gas-usage": 47511.14772,
-          "electric-usage": 808.4254645,
-          "month": 1,
-          "year": 2023
-        },
-        {
-          "id": 60,
-          "water-usage": 1990.499322,
-          "gas-usage": 47521.70545,
-          "electric-usage": 768.2570933,
+          "waterUsage": 1931.542145,
+          "gasUsage": 47604.4618,
+          "electricUsage": 752.9288169,
           "month": 1,
           "year": 2023
         }
