@@ -101,7 +101,7 @@ export const items = [
   },
   {
     title: 'KrishTest',
-    path: '/testpage',
+    path: '/testPage',
     icon: (
       <SvgIcon fontSize="small">
         <XCircleIcon />
