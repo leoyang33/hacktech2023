@@ -2,603 +2,203 @@
     "data" : [
         {
           "id": 1,
-          "name": "modelcitizen",
+          "name": "Jay Dong",
           "phone": "123-456-789",
-          "zipcode": 91125,
+          "zipCode": 91125,
           "city": "Pasadena",
           "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
+          "houseMembers": 2,
+          "houseSize": "small"
         },
         {
           "id": 2,
-          "name": "a",
+          "name": "Krish Mehta",
           "phone": "123-456-790",
-          "zipcode": 91125,
+          "zipCode": 91125,
           "city": "Pasadena",
           "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
+          "houseMembers": 2,
+          "houseSize": "small"
         },
         {
           "id": 3,
-          "name": "b",
+          "name": "Leo Yang",
           "phone": "123-456-791",
-          "zipcode": 91125,
+          "zipCode": 91125,
           "city": "Pasadena",
           "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
+          "houseMembers": 2,
+          "houseSize": "small"
         },
         {
           "id": 4,
-          "name": "c",
+          "name": "Vivian Zhang",
           "phone": "123-456-792",
-          "zipcode": 91125,
+          "zipCode": 91125,
           "city": "Pasadena",
           "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
+          "houseMembers": 2,
+          "houseSize": "small"
         },
         {
           "id": 5,
-          "name": "d",
+          "name": "Rickey Levine",
           "phone": "123-456-793",
-          "zipcode": 91125,
+          "zipCode": 91125,
           "city": "Pasadena",
           "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
+          "houseMembers": 2,
+          "houseSize": "small"
         },
         {
           "id": 6,
-          "name": "e",
+          "name": "Cecil French",
           "phone": "123-456-794",
-          "zipcode": 91125,
+          "zipCode": 91125,
           "city": "Pasadena",
           "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
+          "houseMembers": 4,
+          "houseSize": "medium"
         },
         {
           "id": 7,
-          "name": "f",
+          "name": "Fred McCarty",
           "phone": "123-456-795",
-          "zipcode": 91125,
+          "zipCode": 91125,
           "city": "Pasadena",
           "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
+          "houseMembers": 4,
+          "houseSize": "medium"
         },
         {
           "id": 8,
-          "name": "g",
+          "name": "Maribel Stark",
           "phone": "123-456-796",
-          "zipcode": 91125,
+          "zipCode": 91125,
           "city": "Pasadena",
           "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
+          "houseMembers": 4,
+          "houseSize": "medium"
         },
         {
           "id": 9,
-          "name": "h",
+          "name": "Neal Russel",
           "phone": "123-456-797",
-          "zipcode": 91125,
+          "zipCode": 91125,
           "city": "Pasadena",
           "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
+          "houseMembers": 4,
+          "houseSize": "medium"
         },
         {
           "id": 10,
-          "name": "i",
+          "name": "Jackie Conway",
           "phone": "123-456-798",
-          "zipcode": 91125,
+          "zipCode": 91125,
           "city": "Pasadena",
           "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
+          "houseMembers": 4,
+          "houseSize": "medium"
         },
         {
           "id": 11,
-          "name": "j",
-          "phone": "123-456-799",
-          "zipcode": 91125,
-          "city": "Pasadena",
+          "name": "Jorge Irwin",
+          "phone": "123-456-839",
+          "zipCode": 91265,
+          "city": "Irvine",
           "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
+          "houseMembers": 2,
+          "houseSize": "small"
         },
         {
           "id": 12,
-          "name": "k",
-          "phone": "123-456-800",
-          "zipcode": 91125,
-          "city": "Pasadena",
+          "name": "Patricia Lyons",
+          "phone": "123-456-840",
+          "zipCode": 91265,
+          "city": "Irvine",
           "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
+          "houseMembers": 2,
+          "houseSize": "small"
         },
         {
           "id": 13,
-          "name": "l",
-          "phone": "123-456-801",
-          "zipcode": 91125,
-          "city": "Pasadena",
+          "name": "Dwayne Carpenter",
+          "phone": "123-456-841",
+          "zipCode": 91265,
+          "city": "Irvine",
           "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
+          "houseMembers": 2,
+          "houseSize": "small"
         },
         {
           "id": 14,
-          "name": "m",
-          "phone": "123-456-802",
-          "zipcode": 91125,
-          "city": "Pasadena",
+          "name": "Will Stark",
+          "phone": "123-456-842",
+          "zipCode": 91265,
+          "city": "Irvine",
           "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
+          "houseMembers": 2,
+          "houseSize": "small"
         },
         {
           "id": 15,
-          "name": "n",
-          "phone": "123-456-803",
-          "zipcode": 91125,
-          "city": "Pasadena",
+          "name": "Kenny Kelly",
+          "phone": "123-456-843",
+          "zipCode": 91265,
+          "city": "Irvine",
           "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
+          "houseMembers": 2,
+          "houseSize": "small"
         },
         {
           "id": 16,
-          "name": "o",
-          "phone": "123-456-804",
-          "zipcode": 91125,
-          "city": "Pasadena",
+          "name": "Emmanuel Lopez",
+          "phone": "123-456-844",
+          "zipCode": 91265,
+          "city": "Irvine",
           "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
+          "houseMembers": 4,
+          "houseSize": "medium"
         },
         {
           "id": 17,
-          "name": "p",
-          "phone": "123-456-805",
-          "zipcode": 91125,
-          "city": "Pasadena",
+          "name": "Delia McKinney",
+          "phone": "123-456-845",
+          "zipCode": 91265,
+          "city": "Irvine",
           "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
+          "houseMembers": 4,
+          "houseSize": "medium"
         },
         {
           "id": 18,
-          "name": "q",
-          "phone": "123-456-806",
-          "zipcode": 91125,
-          "city": "Pasadena",
+          "name": "Loretta Crowley",
+          "phone": "123-456-846",
+          "zipCode": 91265,
+          "city": "Irvine",
           "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
+          "houseMembers": 4,
+          "houseSize": "medium"
         },
         {
           "id": 19,
-          "name": "r",
-          "phone": "123-456-807",
-          "zipcode": 91125,
-          "city": "Pasadena",
+          "name": "Cory Gentry",
+          "phone": "123-456-847",
+          "zipCode": 91265,
+          "city": "Irvine",
           "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
+          "houseMembers": 4,
+          "houseSize": "medium"
         },
         {
           "id": 20,
-          "name": "s",
-          "phone": "123-456-808",
-          "zipcode": 91125,
-          "city": "Pasadena",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 21,
-          "name": "t",
-          "phone": "123-456-809",
-          "zipcode": 91125,
-          "city": "Pasadena",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 22,
-          "name": "u",
-          "phone": "123-456-810",
-          "zipcode": 91125,
-          "city": "Pasadena",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 23,
-          "name": "v",
-          "phone": "123-456-811",
-          "zipcode": 91125,
-          "city": "Pasadena",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 24,
-          "name": "w",
-          "phone": "123-456-812",
-          "zipcode": 91125,
-          "city": "Pasadena",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 25,
-          "name": "x",
-          "phone": "123-456-813",
-          "zipcode": 91125,
-          "city": "Pasadena",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 26,
-          "name": "y",
-          "phone": "123-456-814",
-          "zipcode": 91125,
-          "city": "Pasadena",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 27,
-          "name": "z",
-          "phone": "123-456-815",
-          "zipcode": 91125,
-          "city": "Pasadena",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 28,
-          "name": "aa",
-          "phone": "123-456-816",
-          "zipcode": 91125,
-          "city": "Pasadena",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 29,
-          "name": "bb",
-          "phone": "123-456-817",
-          "zipcode": 91125,
-          "city": "Pasadena",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 30,
-          "name": "cc",
-          "phone": "123-456-818",
-          "zipcode": 91125,
-          "city": "Pasadena",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 31,
-          "name": "dd",
-          "phone": "123-456-819",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
-        },
-        {
-          "id": 32,
-          "name": "ee",
-          "phone": "123-456-820",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
-        },
-        {
-          "id": 33,
-          "name": "ff",
-          "phone": "123-456-821",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
-        },
-        {
-          "id": 34,
-          "name": "gg",
-          "phone": "123-456-822",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
-        },
-        {
-          "id": 35,
-          "name": "hh",
-          "phone": "123-456-823",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
-        },
-        {
-          "id": 36,
-          "name": "ii",
-          "phone": "123-456-824",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
-        },
-        {
-          "id": 37,
-          "name": "jj",
-          "phone": "123-456-825",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
-        },
-        {
-          "id": 38,
-          "name": "kk",
-          "phone": "123-456-826",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
-        },
-        {
-          "id": 39,
-          "name": "ll",
-          "phone": "123-456-827",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
-        },
-        {
-          "id": 40,
-          "name": "mm",
-          "phone": "123-456-828",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
-        },
-        {
-          "id": 41,
-          "name": "nn",
-          "phone": "123-456-829",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
-        },
-        {
-          "id": 42,
-          "name": "oo",
-          "phone": "123-456-830",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
-        },
-        {
-          "id": 43,
-          "name": "pp",
-          "phone": "123-456-831",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
-        },
-        {
-          "id": 44,
-          "name": "qq",
-          "phone": "123-456-832",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
-        },
-        {
-          "id": 45,
-          "name": "rr",
-          "phone": "123-456-833",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 2,
-          "housesize": "small"
-        },
-        {
-          "id": 46,
-          "name": "ss",
-          "phone": "123-456-834",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 47,
-          "name": "tt",
-          "phone": "123-456-835",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 48,
-          "name": "uu",
-          "phone": "123-456-836",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 49,
-          "name": "vv",
-          "phone": "123-456-837",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 50,
-          "name": "ww",
-          "phone": "123-456-838",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 51,
-          "name": "xx",
-          "phone": "123-456-839",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 52,
-          "name": "yy",
-          "phone": "123-456-840",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 53,
-          "name": "zz",
-          "phone": "123-456-841",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 54,
-          "name": "aaa",
-          "phone": "123-456-842",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 55,
-          "name": "bbb",
-          "phone": "123-456-843",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 56,
-          "name": "ccc",
-          "phone": "123-456-844",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 57,
-          "name": "ddd",
-          "phone": "123-456-845",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 58,
-          "name": "eee",
-          "phone": "123-456-846",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 59,
-          "name": "fff",
-          "phone": "123-456-847",
-          "zipcode": 91265,
-          "city": "Irvine",
-          "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
-        },
-        {
-          "id": 60,
-          "name": "ggg",
+          "name": "Mathew Freeman",
           "phone": "123-456-848",
-          "zipcode": 91265,
+          "zipCode": 91265,
           "city": "Irvine",
           "state": "California",
-          "housemembers": 4,
-          "housesize": "medium"
+          "houseMembers": 4,
+          "houseSize": "medium"
         }
       ]
 }
