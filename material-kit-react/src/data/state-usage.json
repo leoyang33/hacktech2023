@@ -1,0 +1,308 @@
+[
+    {
+      "state": "Alabama",
+      "water": 2280,
+      "gas": 47404.2925,
+      "electric": 1145
+    },
+    {
+      "state": "Alaska",
+      "water": 2700,
+      "gas": 47764.73885,
+      "electric": 552
+    },
+    {
+      "state": "Arizona",
+      "water": 4410,
+      "gas": 47484.47625,
+      "electric": 1114
+    },
+    {
+      "state": "Arkansas",
+      "water": 3180,
+      "gas": 47337.96438,
+      "electric": 1060
+    },
+    {
+      "state": "California",
+      "water": 3240,
+      "gas": 47698.92788,
+      "electric": 605
+    },
+    {
+      "state": "Colorado",
+      "water": 3330,
+      "gas": 47350.91884,
+      "electric": 711
+    },
+    {
+      "state": "Connecticut",
+      "water": 2250,
+      "gas": 47675.74002,
+      "electric": 703
+    },
+    {
+      "state": "DC",
+      "water": 3750,
+      "gas": 47430.05675,
+      "electric": 631
+    },
+    {
+      "state": "Delaware",
+      "water": 2400,
+      "gas": 47881.45141,
+      "electric": 935
+    },
+    {
+      "state": "Florida",
+      "water": 2610,
+      "gas": 47783.83548,
+      "electric": 1142
+    },
+    {
+      "state": "Georgia",
+      "water": 2370,
+      "gas": 47441.43051,
+      "electric": 1081
+    },
+    {
+      "state": "Hawaii",
+      "water": 4320,
+      "gas": 47409.59127,
+      "electric": 537
+    },
+    {
+      "state": "Idaho",
+      "water": 5040,
+      "gas": 47658.29001,
+      "electric": 955
+    },
+    {
+      "state": "Illinois",
+      "water": 2400,
+      "gas": 47569.35175,
+      "electric": 698
+    },
+    {
+      "state": "Indiana",
+      "water": 2280,
+      "gas": 47369.96322,
+      "electric": 938
+    },
+    {
+      "state": "Iowa",
+      "water": 1950,
+      "gas": 47027.427,
+      "electric": 865
+    },
+    {
+      "state": "Kansas",
+      "water": 2190,
+      "gas": 47849.80738,
+      "electric": 883
+    },
+    {
+      "state": "Kentucky",
+      "water": 2010,
+      "gas": 47778.14229,
+      "electric": 1073
+    },
+    {
+      "state": "Louisiana",
+      "water": 3120,
+      "gas": 47364.09234,
+      "electric": 1201
+    },
+    {
+      "state": "Maine",
+      "water": 1650,
+      "gas": 47531.18403,
+      "electric": 567
+    },
+    {
+      "state": "Maryland",
+      "water": 3090,
+      "gas": 47683.04482,
+      "electric": 964
+    },
+    {
+      "state": "Massachusetts",
+      "water": 1950,
+      "gas": 47557.99838,
+      "electric": 610
+    },
+    {
+      "state": "Michigan",
+      "water": 2370,
+      "gas": 47033.34714,
+      "electric": 676
+    },
+    {
+      "state": "Minnesota",
+      "water": 1860,
+      "gas": 47336.18131,
+      "electric": 775
+    },
+    {
+      "state": "Mississippi",
+      "water": 3000,
+      "gas": 47116.1973,
+      "electric": 1146
+    },
+    {
+      "state": "Missouri",
+      "water": 2640,
+      "gas": 47639.52337,
+      "electric": 1028
+    },
+    {
+      "state": "Montana",
+      "water": 3210,
+      "gas": 47693.70386,
+      "electric": 858
+    },
+    {
+      "state": "Nebraska",
+      "water": 2850,
+      "gas": 47585.09188,
+      "electric": "1,013"
+    },
+    {
+      "state": "Nevada",
+      "water": 4020,
+      "gas": 47488.49886,
+      "electric": 971
+    },
+    {
+      "state": "New Hampshire",
+      "water": 2100,
+      "gas": 47897.75114,
+      "electric": 622
+    },
+    {
+      "state": "New Jersey",
+      "water": 2400,
+      "gas": 47464.04896,
+      "electric": 673
+    },
+    {
+      "state": "New Mexico",
+      "water": 27240,
+      "gas": 47890.66688,
+      "electric": 670
+    },
+    {
+      "state": "New York",
+      "water": 2370,
+      "gas": 47578.94513,
+      "electric": 600
+    },
+    {
+      "state": "North Carolina",
+      "water": 2100,
+      "gas": 47283.95291,
+      "electric": 1041
+    },
+    {
+      "state": "North Dakota",
+      "water": 2400,
+      "gas": 47518.24496,
+      "electric": 1085
+    },
+    {
+      "state": "Ohio",
+      "water": 1980,
+      "gas": 46988.725,
+      "electric": 888
+    },
+    {
+      "state": "Oklahoma",
+      "water": 2550,
+      "gas": 47380.80366,
+      "electric": 1078
+    },
+    {
+      "state": "Oregon",
+      "water": 3390,
+      "gas": 47638.61168,
+      "electric": 916
+    },
+    {
+      "state": "Pennsylvania",
+      "water": 1770,
+      "gas": 47567.29605,
+      "electric": 822
+    },
+    {
+      "state": "Rhode Island",
+      "water": 2160,
+      "gas": 47159.58971,
+      "electric": 599
+    },
+    {
+      "state": "South Carolina",
+      "water": 3000,
+      "gas": 47154.90665,
+      "electric": 1081
+    },
+    {
+      "state": "South Dakota",
+      "water": 2790,
+      "gas": 47115.11562,
+      "electric": 1037
+    },
+    {
+      "state": "Tennessee",
+      "water": 2400,
+      "gas": 47557.90744,
+      "electric": 1168
+    },
+    {
+      "state": "Texas",
+      "water": 2760,
+      "gas": 47020.33638,
+      "electric": 1132
+    },
+    {
+      "state": "Utah",
+      "water": 5010,
+      "gas": 47481.61854,
+      "electric": 769
+    },
+    {
+      "state": "Vermont",
+      "water": 1920,
+      "gas": 47672.91158,
+      "electric": 567
+    },
+    {
+      "state": "Virginia",
+      "water": 2250,
+      "gas": 47395.57291,
+      "electric": 1095
+    },
+    {
+      "state": "Washington",
+      "water": 3330,
+      "gas": 47750.3222,
+      "electric": 969
+    },
+    {
+      "state": "West Virginia",
+      "water": 2400,
+      "gas": 47458.02302,
+      "electric": 1051
+    },
+    {
+      "state": "Wisconsin",
+      "water": 1530,
+      "gas": 47060.52024,
+      "electric": 694
+    },
+    {
+      "state": "Wyoming",
+      "water": 4320,
+      "gas": 47226.76429,
+      "electric": 869
+    }
+  ]

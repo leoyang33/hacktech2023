@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
 import USAMap from "react-usa-map";
-import statesJson from "./states.json";
+import statesUsageJson from "../data/state-usage.json";
+// import statesJson from "./states.json";
 
 import Head from 'next/head';
 import { subDays, subHours } from 'date-fns';
@@ -15,8 +16,6 @@ import Paper from "@mui/material/Paper";
 // import Grid from "@mui/material/Unstable_Grid2";
 import Typography from "@mui/material/Typography";
 
-// http://www.worldlicenseplates.com/usa/US_USAX.html
-
 const MyPaper = styled(Paper)(({ theme }) => ({
   backgroundColor: "#fff",
   ...theme.typography.body2,
@@ -29,41 +28,6 @@ const MyPaper = styled(Paper)(({ theme }) => ({
   justifyContent: "center"
 }));
 
-const BoxButton = styled(Box)(({ theme }) => ({
-  backgroundColor: "#4db6ac",
-  ...theme.typography.h5,
-  padding: theme.spacing(1),
-  margin: theme.spacing(1),
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  color: theme.palette.text.secondary,
-  height: "100%",
-  cursor: "pointer",
-  "&:hover": {
-    backgroundColor: "#80cbc4",
-    borderColor: "#0062cc",
-    boxShadow: "none"
-  }
-}));
-
-const BoxButtonSub = styled(BoxButton)(({ theme }) => ({
-  backgroundColor: "#e57373",
-  "&:hover": {
-    backgroundColor: "#ef9a9a",
-    borderColor: "#0062cc",
-    boxShadow: "none"
-  }
-}));
-
-const BoxButtonSub2 = styled(BoxButton)(({ theme }) => ({
-  backgroundColor: "#F4D03F",
-  "&:hover": {
-    backgroundColor: "#fff176",
-    borderColor: "#0062cc",
-    boxShadow: "none"
-  }
-}));
 
 export default function Map() {
   const states = statesJson.data;
@@ -284,7 +248,6 @@ export default function Map() {
         </Grid>
       </Box> */}
 
-      {/* {msg} */}
       <USAMap customize={colorMap} onClick={onMapClick} />
     </div>
   );
