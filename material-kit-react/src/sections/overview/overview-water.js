@@ -29,7 +29,7 @@ export const OverviewWater = (props) => {
           </Stack>
           <Avatar
             sx={{
-              backgroundColor: 'success.main',
+              backgroundColor: 'custom.water',
               height: 56,
               width: 56
             }}

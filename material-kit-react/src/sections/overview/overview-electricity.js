@@ -29,7 +29,7 @@ export const OverviewElectricity = (props) => {
           </Stack>
           <Avatar
             sx={{
-              backgroundColor: 'error.main',
+              backgroundColor: 'custom.electricity',
               height: 56,
               width: 56
             }}

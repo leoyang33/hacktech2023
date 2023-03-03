@@ -10,6 +10,9 @@ import { OverviewGas } from 'src/sections/overview/overview-gas';
 import { OverviewWater } from 'src/sections/overview/overview-water';
 import { OverviewTotalProfit } from 'src/sections/overview/overview-total-profit';
 import { OverviewTraffic } from 'src/sections/overview/overview-traffic';
+import { OverviewTip } from 'src/sections/overview/overview-tip'
+import { OverviewStat } from 'src/sections/overview/overview-stats'
+
 
 const now = new Date();
 
@@ -106,8 +109,8 @@ const Page = () => (
             lg={4}
           >
             <OverviewTraffic
-              chartSeries={[63, 15, 22]}
-              labels={['Electricity', 'Water', 'Gas']}
+              chartSeries={[100, 325, 215]}
+              labels={['Water','Electricity', 'Gas']}
               sx={{ height: '100%' }}
             />
           </Grid>
@@ -219,6 +222,45 @@ const Page = () => (
                   createdAt: 1554670800000,
                   status: 'delivered'
                 }
+              ]}
+              sx={{ height: '100%' }}
+            />
+          </Grid>
+          <Grid xs={4}>
+            <OverviewTip
+              tips={["You can save electricity by turning off the lights. Turning off the lights makes you use less electricity!",
+              "Tip 2",
+              "Tip 3"
+              ]}
+              type="Electricity"
+              sx={{ height: '100%' }}
+            />
+          </Grid>
+          <Grid xs={4}>
+            <OverviewTip
+              tips={["You can save water by turning off the water. Turning off the water makes you use less water!",
+              "Tip 2",
+              "Tip 3"
+              ]}
+              type="Water"
+              sx={{ height: '100%' }}
+            />
+          </Grid>
+          <Grid xs={4}>
+            <OverviewTip
+              tips={["You can save gas by turning off the gas. Turning off the gas makes you use less gas!",
+              "Tip 2",
+              "Tip 3"
+              ]}
+              type="Gas"
+              sx={{ height: '35vh' }}
+            />
+          </Grid>
+          <Grid xs={4}>
+            <OverviewStat
+              stats={["You saved enough water to fill up a swimming pool!",
+              "Stat 2",
+              "Stat 3"
               ]}
               sx={{ height: '100%' }}
             />
