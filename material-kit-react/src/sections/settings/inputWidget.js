@@ -61,7 +61,7 @@ export const InputWidget = () => {
             >
             <Avatar
             sx={{
-              backgroundColor: 'error.main',
+              backgroundColor: 'custom.electricity',
               height: 100,
               width: 100
             }}
@@ -88,7 +88,7 @@ export const InputWidget = () => {
                 <Avatar
                 alignItems ="center"
                 sx={{
-                backgroundColor: 'warning.main',
+                backgroundColor: 'custom.gas',
                 height: 100,
                 width: 100
                 }}
@@ -114,7 +114,7 @@ export const InputWidget = () => {
             marginTop={"4%"}>
                 <Avatar
                     sx={{
-                    backgroundColor: 'success.main',
+                    backgroundColor: 'custom.water',
                     height: 100,
                     width: 100
                     }}
