@@ -82,8 +82,8 @@ export const items = [
     )
   },
   {
-    title: 'Vivian',
-    path: '/vivian',
+    title: 'Map',
+    path: '/map',
     icon: (
       <SvgIcon fontSize="small">
         <XCircleIcon />
