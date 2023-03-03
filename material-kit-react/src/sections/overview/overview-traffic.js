@@ -24,12 +24,12 @@ const useChartOptions = (labels) => {
       background: 'transparent'
     },
     colors: [
-      theme.palette.primary.main,
-      theme.palette.success.main,
-      theme.palette.warning.main
+      theme.palette.custom.electricity,
+      theme.palette.custom.water,
+      theme.palette.custom.gas
     ],
     dataLabels: {
-      enabled: true
+      enabled: false
     },
     labels,
     legend: {
@@ -66,17 +66,20 @@ const useChartOptions = (labels) => {
 
 const iconMap = {
   Electricity: (
-    <SvgIcon>
+    <SvgIcon sx={{
+      color: 'custom.electricity'}}>
       <BoltIcon />
     </SvgIcon>
   ),
   Water: (
-    <SvgIcon>
+    <SvgIcon sx={{
+      color: 'custom.water'}}>
       <BeakerIcon />
     </SvgIcon>
   ),
   Gas: (
-    <SvgIcon>
+    <SvgIcon sx={{
+      color: 'custom.gas'}}>
       <FireIcon />
     </SvgIcon>
   )

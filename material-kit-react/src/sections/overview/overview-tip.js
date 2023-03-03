@@ -26,6 +26,12 @@ const iconMap = {
   )
 };
 
+const colorMap = {
+  Electricity: 'custom.electricity',
+  Water: 'custom.water',
+  Gas: 'custom.gas'
+};
+
 
 export const OverviewTip = (props) => {
   const { tips, type, sx } = props;
@@ -46,7 +52,7 @@ export const OverviewTip = (props) => {
             </Typography>
             <Avatar
             sx={{
-              backgroundColor: 'warning.main',
+              backgroundColor: colorMap[type],
               height: 56,
               width: 56
             }}

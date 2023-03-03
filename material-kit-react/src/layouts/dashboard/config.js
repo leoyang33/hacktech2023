@@ -6,15 +6,19 @@ import UserIcon from "@heroicons/react/24/solid/UserIcon";
 import UserPlusIcon from "@heroicons/react/24/solid/UserPlusIcon";
 import UsersIcon from "@heroicons/react/24/solid/UsersIcon";
 import XCircleIcon from "@heroicons/react/24/solid/XCircleIcon";
+import PublicIcon from '@mui/icons-material/Public';
+import LeaderboardIcon from '@mui/icons-material/Leaderboard';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import UploadFileIcon from '@mui/icons-material/UploadFile';
 import { SvgIcon } from "@mui/material";
 
 export const items = [
   {
-    title: "Overview",
+    title: "Dashboard",
     path: "/",
     icon: (
       <SvgIcon fontSize="small">
-        <ChartBarIcon />
+        <DashboardIcon />
       </SvgIcon>
     ),
   },
@@ -23,73 +27,91 @@ export const items = [
     path: "/leaderboard",
     icon: (
       <SvgIcon fontSize="small">
-        <ChartBarIcon />
+        <LeaderboardIcon   />
       </SvgIcon>
     ),
   },
   {
-    title: "Customers",
-    path: "/customers",
+    title: "Global Impact",
+    path: "/global",
     icon: (
       <SvgIcon fontSize="small">
-        <UsersIcon />
+        <PublicIcon />
       </SvgIcon>
     ),
   },
   {
-    title: "Companies",
-    path: "/companies",
+    title: "Upload Usage",
+    path: "/report",
     icon: (
       <SvgIcon fontSize="small">
-        <ShoppingBagIcon />
+        <UploadFileIcon />
       </SvgIcon>
     ),
   },
-  {
-    title: "Account",
-    path: "/account",
-    icon: (
-      <SvgIcon fontSize="small">
-        <UserIcon />
-      </SvgIcon>
-    ),
-  },
-  {
-    title: "Settings",
-    path: "/settings",
-    icon: (
-      <SvgIcon fontSize="small">
-        <CogIcon />
-      </SvgIcon>
-    ),
-  },
-  {
-    title: "Login",
-    path: "/auth/login",
-    icon: (
-      <SvgIcon fontSize="small">
-        <LockClosedIcon />
-      </SvgIcon>
-    ),
-  },
-  {
-    title: "Register",
-    path: "/auth/register",
-    icon: (
-      <SvgIcon fontSize="small">
-        <UserPlusIcon />
-      </SvgIcon>
-    ),
-  },
-  {
-    title: "Error",
-    path: "/404",
-    icon: (
-      <SvgIcon fontSize="small">
-        <XCircleIcon />
-      </SvgIcon>
-    )
-  },
+  // {
+  //   title: "Customers",
+  //   path: "/customers",
+  //   icon: (
+  //     <SvgIcon fontSize="small">
+  //       <UsersIcon />
+  //     </SvgIcon>
+  //   ),
+  // },
+  // {
+  //   title: "Companies",
+  //   path: "/companies",
+  //   icon: (
+  //     <SvgIcon fontSize="small">
+  //       <ShoppingBagIcon />
+  //     </SvgIcon>
+  //   ),
+  // },
+  // {
+  //   title: "Account",
+  //   path: "/account",
+  //   icon: (
+  //     <SvgIcon fontSize="small">
+  //       <UserIcon />
+  //     </SvgIcon>
+  //   ),
+  // },
+  // {
+  //   title: "Settings",
+  //   path: "/settings",
+  //   icon: (
+  //     <SvgIcon fontSize="small">
+  //       <CogIcon />
+  //     </SvgIcon>
+  //   ),
+  // },
+  // {
+  //   title: "Login",
+  //   path: "/auth/login",
+  //   icon: (
+  //     <SvgIcon fontSize="small">
+  //       <LockClosedIcon />
+  //     </SvgIcon>
+  //   ),
+  // },
+  // {
+  //   title: "Register",
+  //   path: "/auth/register",
+  //   icon: (
+  //     <SvgIcon fontSize="small">
+  //       <UserPlusIcon />
+  //     </SvgIcon>
+  //   ),
+  // },
+  // {
+  //   title: "Error",
+  //   path: "/404",
+  //   icon: (
+  //     <SvgIcon fontSize="small">
+  //       <XCircleIcon />
+  //     </SvgIcon>
+  //   )
+  // },
   {
     title: 'Map',
     path: '/map',

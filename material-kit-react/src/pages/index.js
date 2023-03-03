@@ -110,7 +110,7 @@ const Page = () => (
           >
             <OverviewTraffic
               chartSeries={[100, 325, 215]}
-              labels={['Electricity', 'Water', 'Gas']}
+              labels={['Water','Electricity', 'Gas']}
               sx={{ height: '100%' }}
             />
           </Grid>

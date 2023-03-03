@@ -29,7 +29,7 @@ export const OverviewGas = (props) => {
           </Stack>
           <Avatar
             sx={{
-              backgroundColor: 'warning.main',
+              backgroundColor: 'custom.gas',
               height: 56,
               width: 56
             }}

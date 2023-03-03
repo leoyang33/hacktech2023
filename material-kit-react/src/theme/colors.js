@@ -68,3 +68,18 @@ export const error = withAlphas({
   darkest: '#7A271A',
   contrastText: '#FFFFFF'
 });
+
+export const custom = {
+  grey: '#FAF9F6',
+  darkblue: '#1C77C3',
+  lightblue: '#39A9DB',
+  red: '#E25822',
+  yellow: '#FFF822',
+  green: '#295E11',
+  orange: '#EB9C5C',
+  black: '#3B3C36',
+  lightgreen: '#BEED76',
+  water: '#1982C4',
+  electricity: '#ffca3a',
+  gas: '#ff595e'
+};
