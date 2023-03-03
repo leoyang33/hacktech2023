@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
 import USAMap from "react-usa-map";
 import statesUsageJson from "../data/state-usage.json";
-// import statesJson from "./states.json";
+import statesJson from "./states.json";
 
 import Head from 'next/head';
 import { subDays, subHours } from 'date-fns';
