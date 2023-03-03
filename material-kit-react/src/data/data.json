@@ -3,7 +3,7 @@
         {
           "id": 1,
           "waterUsage": 1900.608304,
-          "gasUsage": 47000.85935,
+          "gasUsage": 47400.85935,
           "electricUsage": 730.1922318,
           "month": 1,
           "year": 2023
@@ -11,7 +11,7 @@
         {
           "id": 1,
           "waterUsage": 1890.302191,
-          "gasUsage": 47001.43365,
+          "gasUsage": 47301.43365,
           "electricUsage": 734.5287185,
           "month": 2,
           "year": 2023
@@ -19,7 +19,7 @@
         {
           "id": 1,
           "waterUsage": 1965.595553,
-          "gasUsage": 46980.68168,
+          "gasUsage": 47380.68168,
           "electricUsage": 731.5167772,
           "month": 3,
           "year": 2023
@@ -27,7 +27,7 @@
         {
           "id": 1,
           "waterUsage": 1880.394608,
-          "gasUsage": 46500.68387,
+          "gasUsage": 47300.68387,
           "electricUsage": 729.5665227,
           "month": 4,
           "year": 2023
