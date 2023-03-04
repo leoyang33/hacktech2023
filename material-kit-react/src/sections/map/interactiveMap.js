@@ -1,8 +1,11 @@
-import { Avatar, Card, CardContent, CardHeader, rgbToHex, Stack, SvgIcon, Typography } from '@mui/material';
+import { Avatar, Card, CardContent, CardHeader, Chip, Stack, SvgIcon, Typography, Grid } from '@mui/material';
 import USAMap from "react-usa-map";
 import stateUsageJSON from '../../data/stateUsage.json';
 import statesJSON from '../../data/states.json';
 import { defaultConfig } from 'next/dist/server/config-shared';
+import { Container } from '@mui/system';
+import { getPickersToolbarTextUtilityClass } from '@mui/x-date-pickers/internals/components/pickersToolbarTextClasses';
+import { useState } from 'react';
 
 
 export const InteractiveMap = (props) => {
@@ -10,6 +13,8 @@ export const InteractiveMap = (props) => {
   const value = 0.86;
   const minH = 0;
   const maxH = 0.33;
+
+  const units = {gas: "cu ft", electric: "kWh", water: "gal"}
 
   const processData = (stateUsageJSON, statesJSON) => { 
     const stateData = statesJSON.data;
@@ -73,13 +78,50 @@ export const InteractiveMap = (props) => {
     return toReturn;
   } 
 
-  const processedData = processData(stateUsageJSON, statesJSON);
+  const calculateMinMax = (processedData, utility) => {
+    var min = Number.POSITIVE_INFINITY;
+    var max = Number.NEGATIVE_INFINITY;
+    
+    for (var i in processedData) {
+      min = Math.min(min, processedData[i][utility])
+      max = Math.max(max, processedData[i][utility])
+    }
 
+    return [min, max]
+  } 
+
+  const [utility, setUtility] = useState("gas");
+  const processedData = processData(stateUsageJSON, statesJSON);
+  
   return (
-    <Card sx={10}>
+    <Card sx={16}>
       <CardContent>
-        <CardHeader title={"Interactive Map"}/>
-        <USAMap customize={calculateColors(processedData, "electric")}></USAMap>
+        <CardHeader title={"Interactive Map"} />
+          <Grid 
+            container 
+            spacing={0}
+            direction="column"
+            alignItems="center"
+            justifyContent="center"
+          >
+            <Grid item xs={3}>
+              <USAMap customize={calculateColors(processedData, utility)}></USAMap>
+            </Grid>
+            <Grid item xs={3}>
+              <Chip style={{width: 1000, height: 15, background: 'linear-gradient(to left, #db2525, #25db25)'}} />
+            </Grid>
+            <Grid container direction={"row"} justifyContent={"space-between"} alignItems="center">
+              <Typography paddingLeft={"50px"}>
+                {Math.round(calculateMinMax(processedData, utility)[0])}
+              </Typography>
+              <Typography>
+                Utility used (${units[utility]})
+              </Typography>
+              <Typography paddingRight={"50px"}>
+                {Math.round(calculateMinMax(processedData, utility)[1])}
+              </Typography>
+            </Grid>
+          </Grid>
       </CardContent>
     </Card>
   );
