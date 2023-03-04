@@ -1,21 +1,13 @@
 import PropTypes from 'prop-types';
 import ArrowDownIcon from '@heroicons/react/24/solid/ArrowDownIcon';
 import ArrowUpIcon from '@heroicons/react/24/solid/ArrowUpIcon';
-import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import { Avatar, Card, CardContent, Stack, SvgIcon, Typography } from '@mui/material';
+import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
+import CurrencyDollarIcon from '@heroicons/react/24/solid/CurrencyDollarIcon';
 
-
-export const OverviewGas = (props) => {
-  const { sx, usersJSON, dataJSON } = props;
-  const dataInfo = dataJSON.data;
-  var curUsage = Math.round(dataInfo[4]['gasUsage']);
-  var prevUsage = Math.round(dataInfo[3]['gasUsage']);
-  console.log(curUsage, prevUsage);
-  var positive = (curUsage < prevUsage);
-  var value = curUsage;
-  var difference = Math.round(Math.abs((curUsage - prevUsage) * 100 / curUsage));
-
-
+export const OverviewBill = (props) => {
+  const { sx, value, difference, positive=false } = props;
+  
   return (
     <Card sx={sx}>
       <CardContent>
@@ -30,21 +22,21 @@ export const OverviewGas = (props) => {
               color="text.secondary"
               variant="overline"
             >
-              Gas
+              Total Bill
             </Typography>
             <Typography variant="h5">
-              {value} CFT
+              {value}
             </Typography>
           </Stack>
           <Avatar
             sx={{
-              backgroundColor: 'custom.gas',
+              backgroundColor: 'primary.main',
               height: 56,
               width: 56
             }}
           >
             <SvgIcon>
-              <LocalFireDepartmentIcon />
+              <CurrencyDollarIcon />
             </SvgIcon>
           </Avatar>
         </Stack>
@@ -61,13 +53,13 @@ export const OverviewGas = (props) => {
               spacing={0.5}
             >
               <SvgIcon
-                color={!positive ? 'success' : 'error'}
+                color={positive ? 'success' : 'error'}
                 fontSize="small"
               >
-                {positive ? <ArrowUpIcon /> : <ArrowDownIcon />}
+                {!positive ? <ArrowUpIcon /> : <ArrowDownIcon />}
               </SvgIcon>
               <Typography
-                color={!positive ? 'success.main' : 'error.main'}
+                color={positive ? 'success.main' : 'error.main'}
                 variant="body2"
               >
                 {difference}%
@@ -86,7 +78,6 @@ export const OverviewGas = (props) => {
   );
 };
 
-OverviewGas.propTypes = {
-  sx: PropTypes.object
+OverviewBill.prototypes = {
+  sx: PropTypes.object,
 };
-

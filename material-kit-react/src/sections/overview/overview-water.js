@@ -7,7 +7,14 @@ import OpacityIcon from '@mui/icons-material/Opacity';
 
 
 export const OverviewWater = (props) => {
-  const { difference, positive = false, sx, value } = props;
+  const { sx, usersJSON, dataJSON } = props;
+  const dataInfo = dataJSON.data;
+  var curUsage = Math.round(dataInfo[4]['waterUsage']);
+  var prevUsage = Math.round(dataInfo[3]['waterUsage']);
+  console.log(curUsage, prevUsage);
+  var positive = (curUsage < prevUsage);
+  var value = curUsage;
+  var difference = Math.round(Math.abs((curUsage - prevUsage) * 100 / curUsage));
 
   return (
     <Card sx={sx}>
@@ -25,8 +32,8 @@ export const OverviewWater = (props) => {
             >
               Water
             </Typography>
-            <Typography variant="h4">
-              {value}
+            <Typography variant="h5">
+              {value} CCF
             </Typography>
           </Stack>
           <Avatar
@@ -80,9 +87,6 @@ export const OverviewWater = (props) => {
 };
 
 OverviewWater.propTypes = {
-  difference: PropTypes.number,
-  positive: PropTypes.bool,
-  value: PropTypes.string.isRequired,
   sx: PropTypes.object
 };
 
