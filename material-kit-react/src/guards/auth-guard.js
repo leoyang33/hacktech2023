@@ -27,17 +27,18 @@ export const AuthGuard = (props) => {
 
       ignore.current = true;
 
-      if (!isAuthenticated) {
-        console.log('Not authenticated, redirecting');
-        router
-          .replace({
-            pathname: '/',
-            query: router.asPath !== '/' ? { continueUrl: router.asPath } : undefined
-          })
-          .catch(console.error);
-      } else {
-        setChecked(true);
-      }
+      // if (!isAuthenticated) {
+      //   console.log('Not authenticated, redirecting');
+      //   router
+      //     .replace({
+      //       pathname: '/',
+      //       // query: router.asPath !== '/' ? { continueUrl: router.asPath } : undefined
+      //     })
+      //     .catch(console.error);
+      // } else {
+      //   setChecked(true);
+      // }
+      setChecked(true);
     },
     [router.isReady]
   );
