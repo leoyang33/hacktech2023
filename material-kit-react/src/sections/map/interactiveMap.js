@@ -2,11 +2,7 @@ import { Avatar, Card, CardContent, CardHeader, Chip, Stack, SvgIcon, Typography
 import USAMap from "react-usa-map";
 import stateUsageJSON from '../../data/stateUsage.json';
 import statesJSON from '../../data/states.json';
-import { defaultConfig } from 'next/dist/server/config-shared';
-import { Container } from '@mui/system';
-import { getPickersToolbarTextUtilityClass } from '@mui/x-date-pickers/internals/components/pickersToolbarTextClasses';
 import { useState } from 'react';
-
 
 export const InteractiveMap = (props) => {
   const saturation = 0.83;
