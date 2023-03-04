@@ -155,8 +155,8 @@ const Page = () => (
           </Grid>
           <Grid xs={4}>
             <OverviewStat
-              stats={["You saved 5000 gallons of water so far this year. That's enough water to fill up a swimming pool!",
-              "You saved 500 kWh of elecricity this month. That's equivalent to 427.5 lbs of carbon emissions you avoided!",
+              stats={["You saved 5000 gallons of water so far. That's enough water to fill up a swimming pool!",
+              "You saved 500 kWh of electricity this month. That's equivalent to 427.5 lbs of carbon emissions you avoided!",
               "You saved 20 cubic feet of gas this month. That's enough to power the average car for 3.5 months!"
               ]}
               sx={{ height: '100%' }}
