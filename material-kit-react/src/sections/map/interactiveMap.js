@@ -15,6 +15,7 @@ export const InteractiveMap = (props) => {
   const maxH = 0.33;
 
   const units = {gas: "cu ft", electric: "kWh", water: "gal"}
+  const util = {gas: "Gas", electric: "Electricity", water: "Water"}
 
   const processData = (stateUsageJSON, statesJSON) => { 
     const stateData = statesJSON.data;
@@ -115,7 +116,7 @@ export const InteractiveMap = (props) => {
                 {Math.round(calculateMinMax(processedData, utility)[0])}
               </Typography>
               <Typography>
-                Utility used (${units[utility]})
+                {util[utility]} used ({units[utility]})
               </Typography>
               <Typography paddingRight={"50px"}>
                 {Math.round(calculateMinMax(processedData, utility)[1])}
