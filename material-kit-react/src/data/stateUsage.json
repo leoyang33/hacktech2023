@@ -1,4 +1,4 @@
-[
+{"data": [
     {
       "state": "Alabama",
       "water": 2280,
@@ -40,12 +40,6 @@
       "water": 2250,
       "gas": 47675.74002,
       "electric": 703
-    },
-    {
-      "state": "DC",
-      "water": 3750,
-      "gas": 47430.05675,
-      "electric": 631
     },
     {
       "state": "Delaware",
@@ -165,7 +159,7 @@
       "state": "Nebraska",
       "water": 2850,
       "gas": 47585.09188,
-      "electric": "1,013"
+      "electric": 1013
     },
     {
       "state": "Nevada",
@@ -306,3 +300,4 @@
       "electric": 869
     }
   ]
+}
