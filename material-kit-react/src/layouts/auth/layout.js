@@ -45,8 +45,8 @@ export const Layout = (props) => {
               href="/"
               sx={{
                 display: 'inline-flex',
-                height: 32,
-                width: 32
+                height: 64,
+                width: 64
               }}
             >
               <Logo />

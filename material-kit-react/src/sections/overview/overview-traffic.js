@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
-import ComputerDesktopIcon from '@heroicons/react/24/solid/ComputerDesktopIcon';
-import DeviceTabletIcon from '@heroicons/react/24/solid/DeviceTabletIcon';
-import PhoneIcon from '@heroicons/react/24/solid/PhoneIcon';
 import { BoltIcon } from "@heroicons/react/24/solid";
-import { FireIcon } from "@heroicons/react/24/solid";
+import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import { BeakerIcon } from "@heroicons/react/24/solid";
+import OpacityIcon from '@mui/icons-material/Opacity';
+import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 
 
 import {
@@ -27,9 +26,9 @@ const useChartOptions = (labels) => {
       background: 'transparent'
     },
     colors: [
-      theme.palette.primary.main,
-      theme.palette.success.main,
-      theme.palette.warning.main
+      theme.palette.custom.electricity,
+      theme.palette.custom.water,
+      theme.palette.custom.gas
     ],
     dataLabels: {
       enabled: false
@@ -69,18 +68,21 @@ const useChartOptions = (labels) => {
 
 const iconMap = {
   Electricity: (
-    <SvgIcon>
-      <BoltIcon />
+    <SvgIcon sx={{
+      color: 'custom.electricity'}}>
+      <ElectricBoltIcon />
     </SvgIcon>
   ),
   Water: (
-    <SvgIcon>
-      <BeakerIcon />
+    <SvgIcon sx={{
+      color: 'custom.water'}}>
+      <OpacityIcon />
     </SvgIcon>
   ),
   Gas: (
-    <SvgIcon>
-      <FireIcon />
+    <SvgIcon sx={{
+      color: 'custom.gas'}}>
+      <LocalFireDepartmentIcon />
     </SvgIcon>
   )
 };
@@ -130,7 +132,7 @@ export const OverviewTraffic = (props) => {
                   color="text.secondary"
                   variant="subtitle2"
                 >
-                  {item}%
+                  ${item}
                 </Typography>
               </Box>
             );
