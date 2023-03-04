@@ -3,7 +3,7 @@
         {
           "water": "gallons",
           "gas": "cubic feet",
-          "electric": "kwH"
+          "electric": "kWh"
         }
     ]
 }
