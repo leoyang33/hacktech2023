@@ -81,5 +81,8 @@ export const custom = {
   lightgreen: '#BEED76',
   water: '#1982C4',
   electricity: '#ffca3a',
-  gas: '#ff595e'
+  gas: '#ff595e',
+  electricity2: '#fbebc3',
+  gas2: "#fbcace",
+  water2: '#b6d6ec'
 };

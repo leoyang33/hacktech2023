@@ -1,8 +1,11 @@
-import { Avatar, Card, CardContent, CardHeader, Chip, Stack, SvgIcon, Typography, Grid } from '@mui/material';
+import { Avatar, Card, CardContent, CardHeader, Chip, Stack, SvgIcon, Typography, Grid, Box, Button, IconButton } from '@mui/material';
 import USAMap from "react-usa-map";
 import stateUsageJSON from '../../data/stateUsage.json';
 import statesJSON from '../../data/states.json';
 import { useState } from 'react';
+import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
+import OpacityIcon from '@mui/icons-material/Opacity';
+import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 
 export const InteractiveMap = (props) => {
   const saturation = 0.83;
@@ -87,20 +90,31 @@ export const InteractiveMap = (props) => {
     return [min, max]
   } 
 
-  const [utility, setUtility] = useState("gas");
+  const [utility, setUtility] = useState("electric");
   const processedData = processData(stateUsageJSON, statesJSON);
+
+  const handleClick = (util) => {
+    setUtility(util);
+  }
   
   return (
     <Card sx={16}>
       <CardContent>
-        <CardHeader title={"Interactive Map"} />
+        <CardHeader title={"Interactive Map"} sx={{paddingBottom: "50px"}}/>
           <Grid 
             container 
-            spacing={0}
+            spacing={3}
             direction="column"
             alignItems="center"
             justifyContent="center"
           >
+            <Grid justify="center" alignItems="center">
+              <Stack direction="row" spacing={10}>
+                <Button sx={{ color: "custom.gas", backgroundColor: utility == "gas" ? "custom.gas2" : "", minWidth: '200px', '&:hover': {backgroundColor: utility == "gas" ? "custom.gas2" : "transparent"}}} onClick={(e) => handleClick("gas")}><LocalFireDepartmentIcon /></Button>
+                <Button sx={{ color: "custom.water", backgroundColor: utility == "water" ? "custom.water2" : "", minWidth: '200px', '&:hover': {backgroundColor: utility == "water" ? "custom.water2" : "transparent"}}} onClick={(e) => handleClick("water")}><OpacityIcon /></Button>
+                <Button sx={{ color: "custom.electricity", backgroundColor: utility == "electric" ? "custom.electricity2" : "", minWidth: '200px', '&:hover': {backgroundColor: utility == "electric" ? "custom.electricity2" : "transparent"}}} onClick={(e) => handleClick("electric")}><ElectricBoltIcon /></Button>
+              </Stack>
+            </Grid>
             <Grid item xs={3}>
               <USAMap customize={calculateColors(processedData, utility)}></USAMap>
             </Grid>
