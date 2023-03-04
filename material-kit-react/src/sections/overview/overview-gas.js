@@ -4,8 +4,17 @@ import ArrowUpIcon from '@heroicons/react/24/solid/ArrowUpIcon';
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import { Avatar, Card, CardContent, Stack, SvgIcon, Typography } from '@mui/material';
 
+
 export const OverviewGas = (props) => {
-  const { difference, positive = false, sx, value } = props;
+  const { sx, usersJSON, dataJSON } = props;
+  const dataInfo = dataJSON.data;
+  var curUsage = Math.round(dataInfo[4]['gasUsage']);
+  var prevUsage = Math.round(dataInfo[3]['gasUsage']);
+  console.log(curUsage, prevUsage);
+  var positive = (curUsage < prevUsage);
+  var value = curUsage;
+  var difference = Math.round(Math.abs((curUsage - prevUsage) * 100 / curUsage));
+
 
   return (
     <Card sx={sx}>
@@ -23,8 +32,8 @@ export const OverviewGas = (props) => {
             >
               Gas
             </Typography>
-            <Typography variant="h4">
-              {value}
+            <Typography variant="h5">
+              {value} CFT
             </Typography>
           </Stack>
           <Avatar
@@ -78,9 +87,6 @@ export const OverviewGas = (props) => {
 };
 
 OverviewGas.propTypes = {
-  difference: PropTypes.number,
-  positive: PropTypes.bool,
-  value: PropTypes.string.isRequired,
   sx: PropTypes.object
 };
 

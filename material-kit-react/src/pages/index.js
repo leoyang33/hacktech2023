@@ -13,6 +13,8 @@ import { OverviewTraffic } from 'src/sections/overview/overview-traffic';
 import { OverviewTip } from 'src/sections/overview/overview-tip'
 import { OverviewStat } from 'src/sections/overview/overview-stats'
 import { OverviewUsage } from 'src/sections/overview/overview-usage';
+import dataJSON from '../data/data.json';
+import usersJSON from '../data/users.json';
 
 
 const now = new Date();
@@ -42,10 +44,9 @@ const Page = () => (
             lg={3}
           >
             <OverviewElectricity
-              difference={12}
-              positive={false}
               sx={{ height: '100%' }}
-              value="20k KWH"
+              usersJSON = {usersJSON}
+              dataJSON = {dataJSON}
             />
           </Grid>
           <Grid
@@ -54,10 +55,9 @@ const Page = () => (
             lg={3}
           >
             <OverviewWater
-              difference={16}
-              positive={true}
               sx={{ height: '100%' }}
-              value="2k CCF"
+              usersJSON = {usersJSON}
+              dataJSON = {dataJSON}
             />
           </Grid>
           <Grid
@@ -66,10 +66,9 @@ const Page = () => (
             lg={3}
           >
             <OverviewGas
-              difference={12}
-              positive={false}
               sx={{ height: '100%' }}
-              value="120 CCF"
+              usersJSON = {usersJSON}
+              dataJSON = {dataJSON}
             />
           </Grid>
           <Grid

@@ -5,8 +5,16 @@ import { Avatar, Card, CardContent, Stack, SvgIcon, Typography } from '@mui/mate
 import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 
 export const OverviewElectricity = (props) => {
-  const { difference, positive = false, sx, value } = props;
+  const { sx, usersJSON, dataJSON } = props;
+  const dataInfo = dataJSON.data;
+  var curUsage = Math.round(dataInfo[4]['electricUsage']);
+  var prevUsage = Math.round(dataInfo[3]['electricUsage']);
+  console.log(curUsage, prevUsage);
+  var positive = (curUsage < prevUsage);
+  var difference = Math.round(Math.abs((curUsage - prevUsage) * 100 / curUsage));
 
+  console.log(difference)
+  
   return (
     <Card sx={sx}>
       <CardContent>
@@ -23,8 +31,8 @@ export const OverviewElectricity = (props) => {
             >
               Electricity
             </Typography>
-            <Typography variant="h4">
-              {value}
+            <Typography variant="h5">
+              {curUsage} KWH
             </Typography>
           </Stack>
           <Avatar
@@ -78,8 +86,5 @@ export const OverviewElectricity = (props) => {
 };
 
 OverviewElectricity.prototypes = {
-  difference: PropTypes.number,
-  positive: PropTypes.bool,
   sx: PropTypes.object,
-  value: PropTypes.string.isRequired
 };
