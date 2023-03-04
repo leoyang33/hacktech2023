@@ -5,23 +5,26 @@ import { BoltIcon, BeakerIcon, FireIcon } from "@heroicons/react/24/solid";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import React, { useState } from 'react';
+import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
+import OpacityIcon from '@mui/icons-material/Opacity';
+import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 
 import {EmailShareButton, FacebookShareButton, TwitterShareButton} from "react-share";
 
 const iconMap = {
   Electricity: (
     <SvgIcon>
-      <BoltIcon />
+      <ElectricBoltIcon />
     </SvgIcon>
   ),
   Water: (
     <SvgIcon>
-      <BeakerIcon />
+      <OpacityIcon />
     </SvgIcon>
   ),
   Gas: (
     <SvgIcon>
-      <FireIcon />
+      <LocalFireDepartmentIcon />
     </SvgIcon>  
   )
 };

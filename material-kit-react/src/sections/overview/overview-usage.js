@@ -46,7 +46,7 @@ export const OverviewUsage = (props) => {
           <TabContext value={value}>
           <Grid justify="center" alignItems="center">
             <Box>
-              <Tabs value={value} onChange={handleChange} aria-label="icon label tabs example">
+              <Tabs value={value} onChange={handleChange}>
                 <Tab icon={<ElectricBoltIcon />} value="1"/>
                 <Tab icon={<OpacityIcon />} value="2"/>
                 <Tab icon={<LocalFireDepartmentIcon />} value="3"/>

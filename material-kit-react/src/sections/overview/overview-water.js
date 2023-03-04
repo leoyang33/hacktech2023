@@ -3,6 +3,8 @@ import ArrowDownIcon from '@heroicons/react/24/solid/ArrowDownIcon';
 import ArrowUpIcon from '@heroicons/react/24/solid/ArrowUpIcon';
 import { BeakerIcon } from "@heroicons/react/24/solid";
 import { Avatar, Card, CardContent, Stack, SvgIcon, Typography } from '@mui/material';
+import OpacityIcon from '@mui/icons-material/Opacity';
+
 
 export const OverviewWater = (props) => {
   const { difference, positive = false, sx, value } = props;
@@ -35,7 +37,7 @@ export const OverviewWater = (props) => {
             }}
           >
             <SvgIcon>
-              <BeakerIcon />
+              <OpacityIcon />
             </SvgIcon>
           </Avatar>
         </Stack>

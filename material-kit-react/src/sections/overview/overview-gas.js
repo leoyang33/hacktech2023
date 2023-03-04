@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import ArrowDownIcon from '@heroicons/react/24/solid/ArrowDownIcon';
 import ArrowUpIcon from '@heroicons/react/24/solid/ArrowUpIcon';
-import { FireIcon } from "@heroicons/react/24/solid";
+import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import { Avatar, Card, CardContent, Stack, SvgIcon, Typography } from '@mui/material';
 
 export const OverviewGas = (props) => {
@@ -35,7 +35,7 @@ export const OverviewGas = (props) => {
             }}
           >
             <SvgIcon>
-              <FireIcon />
+              <LocalFireDepartmentIcon />
             </SvgIcon>
           </Avatar>
         </Stack>

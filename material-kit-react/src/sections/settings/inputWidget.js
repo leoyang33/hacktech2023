@@ -66,7 +66,7 @@ export const InputWidget = () => {
               width: 100
             }}
             >
-                <SvgIcon><BoltIcon /></SvgIcon>
+                <SvgIcon><ElectricBoltIcon /></SvgIcon>
             </Avatar>
                 <TextField
                 fullWidth
@@ -93,7 +93,7 @@ export const InputWidget = () => {
                 width: 100
                 }}
                 >
-                    <SvgIcon><FireIcon /></SvgIcon>
+                    <SvgIcon><LocalFireDepartmentIcon /></SvgIcon>
                 </Avatar>
                 <TextField
                 fullWidth
@@ -119,7 +119,7 @@ export const InputWidget = () => {
                     width: 100
                     }}
                     >
-                        <SvgIcon><BeakerIcon /></SvgIcon>
+                        <SvgIcon><OpacityIcon /></SvgIcon>
                     </Avatar>
                 <TextField
                 fullWidth

@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import { BoltIcon } from "@heroicons/react/24/solid";
-import { FireIcon } from "@heroicons/react/24/solid";
+import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import { BeakerIcon } from "@heroicons/react/24/solid";
+import OpacityIcon from '@mui/icons-material/Opacity';
+import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 
 
 import {
@@ -68,19 +70,19 @@ const iconMap = {
   Electricity: (
     <SvgIcon sx={{
       color: 'custom.electricity'}}>
-      <BoltIcon />
+      <ElectricBoltIcon />
     </SvgIcon>
   ),
   Water: (
     <SvgIcon sx={{
       color: 'custom.water'}}>
-      <BeakerIcon />
+      <OpacityIcon />
     </SvgIcon>
   ),
   Gas: (
     <SvgIcon sx={{
       color: 'custom.gas'}}>
-      <FireIcon />
+      <LocalFireDepartmentIcon />
     </SvgIcon>
   )
 };

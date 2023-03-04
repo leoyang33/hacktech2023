@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import ArrowDownIcon from '@heroicons/react/24/solid/ArrowDownIcon';
 import ArrowUpIcon from '@heroicons/react/24/solid/ArrowUpIcon';
-import { BoltIcon } from "@heroicons/react/24/solid";
 import { Avatar, Card, CardContent, Stack, SvgIcon, Typography } from '@mui/material';
+import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 
 export const OverviewElectricity = (props) => {
   const { difference, positive = false, sx, value } = props;
@@ -35,7 +35,7 @@ export const OverviewElectricity = (props) => {
             }}
           >
             <SvgIcon>
-              <BoltIcon />
+              <ElectricBoltIcon />
             </SvgIcon>
           </Avatar>
         </Stack>
