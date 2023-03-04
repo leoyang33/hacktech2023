@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import ArrowPathIcon from '@heroicons/react/24/solid/ArrowPathIcon';
-import ArrowRightIcon from '@heroicons/react/24/solid/ArrowRightIcon';
+import PropTypes from "prop-types";
+import ArrowPathIcon from "@heroicons/react/24/solid/ArrowPathIcon";
+import ArrowRightIcon from "@heroicons/react/24/solid/ArrowRightIcon";
 import {
   Button,
   Card,
@@ -8,12 +8,12 @@ import {
   CardContent,
   CardHeader,
   Divider,
-  SvgIcon
-} from '@mui/material';
-import { alpha, useTheme } from '@mui/material/styles';
-import { Chart } from 'src/components/chart';
-import dataJson from  "../../data/data.json"
-import { useState, useEffect } from 'react';
+  SvgIcon,
+} from "@mui/material";
+import { alpha, useTheme } from "@mui/material/styles";
+import { Chart } from "src/components/chart";
+import dataJson from "../../data/data.json";
+import { useState, useEffect } from "react";
 
 // const useChartOptions = () => {
 //   const theme = useTheme();
@@ -105,7 +105,6 @@ import { useState, useEffect } from 'react';
 //     }
 //   };
 // };
-
 
 const useChartOptions = () => {
   const theme = useTheme();
@@ -239,8 +238,6 @@ function getNStd(mu, std, n, interval = 1) {
   return values;
 }
 
-
-
 export const OverviewSales = (props) => {
   const { chartSeries, sx } = props;
   const chartOptions = useChartOptions();
@@ -256,55 +253,94 @@ export const OverviewSales = (props) => {
     setStd(computeStd(waterUsage));
   }, [energyData]);
 
-  const x_vals = getNStd(mean, std, 3, 0.25);
-  const data = {
-    series: [
-      {
-        name: "Water Usage",
-        data: x_vals.map((element) => ({
-          x: element,
-          y: bellCurve(element, mean, std),
-        })),
+  const x_vals = getNStd(mean, std, 3, 0.05);
+
+  const data = [
+    {
+      name: "Water Usage",
+      data: x_vals.map((element) => ({
+        x: element,
+        y: bellCurve(element, mean, std),
+      })),
+    },
+  ];
+
+  const options = {
+    chart: {
+      height: 350,
+      type: "area",
+    },
+    title: {
+      text: "Water Usage",
+    },
+    xaxis: {
+      type: "numeric",
+      title: {
+        text: "Usage (Gallons)",
       },
-    ],
+    },
+    yaxis: {
+      show: false,
+      title: {
+        text: "",
+      },
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    legend: {
+      show: false,
+    },
+    stroke: {
+      curve: "smooth",
+    },
+    annotations: {
+      points: [
+        {
+          x: 2405,
+          y: 0.001074,
+          marker: {
+            size: 8,
+            fillColor: "#fff",
+            strokeColor: "#255aee",
+            shadeTo: "light",
+            strokeWidth: 2,
+          },
+        },
+      ],
+    },
   };
 
   return (
     <Card sx={sx}>
       <CardHeader
-        action={(
+        action={
           <Button
             color="inherit"
             size="small"
-            startIcon={(
+            startIcon={
               <SvgIcon fontSize="small">
                 <ArrowPathIcon />
               </SvgIcon>
-            )}
+            }
           >
             Sync
           </Button>
-        )}
+        }
         title="Usage History"
       />
       <CardContent>
-        <Chart
-          height={350}
-          options={chartOptions}
-          series={data}
-          type="bar"
-          width="100%"
-        />
+        <Chart options={options} series={data} type="area" width="100%" />
       </CardContent>
       <Divider />
-      <CardActions sx={{ justifyContent: 'flex-end' }}>
+      <CardActions sx={{ justifyContent: "flex-end" }}>
         <Button
           color="inherit"
-          endIcon={(
+          endIcon={
             <SvgIcon fontSize="small">
               <ArrowRightIcon />
             </SvgIcon>
-          )}
+          }
           size="small"
         >
           Overview
@@ -316,5 +352,5 @@ export const OverviewSales = (props) => {
 
 OverviewSales.protoTypes = {
   chartSeries: PropTypes.array.isRequired,
-  sx: PropTypes.object
+  sx: PropTypes.object,
 };

@@ -198,11 +198,13 @@ export const LeaderboardBellCurve = (props) => {
   //   </>
   // );
   return (
-    <Card sx={sx}>
-      <CardHeader title="Usage History" />
-      <CardContent>
-        <Chart height={350} options={chartOptions} series={chartSeries} type="bar" width="100%" />
-      </CardContent>
-    </Card>
+    <>
+      <Card sx={sx}>
+        <CardHeader title="Usage History" />
+        <CardContent>
+          <Chart height={350} options={chartOptions} series={chartSeries} width="100%" />
+        </CardContent>
+      </Card>
+    </>
   );
 };
