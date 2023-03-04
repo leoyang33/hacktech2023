@@ -2,6 +2,9 @@ import { useCallback, useState } from 'react';
 import ArrowDownIcon from '@heroicons/react/24/solid/ArrowDownIcon';
 import ArrowUpIcon from '@heroicons/react/24/solid/ArrowUpIcon';
 import { BoltIcon, FireIcon, BeakerIcon } from "@heroicons/react/24/solid";
+import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
+import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
+import OpacityIcon from '@mui/icons-material/Opacity';
 import {
   Avatar,
   Button,
