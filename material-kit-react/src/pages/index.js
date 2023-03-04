@@ -15,6 +15,7 @@ import { OverviewStat } from 'src/sections/overview/overview-stats'
 import { OverviewUsage } from 'src/sections/overview/overview-usage';
 import dataJSON from '../data/data.json';
 import usersJSON from '../data/users.json';
+import { OverviewBill } from 'src/sections/overview/overview-bill';
 
 
 const now = new Date();
@@ -38,6 +39,53 @@ const Page = () => (
           container
           spacing={3}
         >
+          <Grid
+            xs={12}
+            md={6}
+            lg={4}
+          >
+            <OverviewTraffic
+              chartSeries={[100, 325, 215]}
+              labels={['Water','Electricity', 'Gas']}
+              sx={{ height: '100%' }}
+            />
+          </Grid>
+          <Grid
+            xs={8}
+          >
+            <OverviewUsage
+              graphs={[
+                {
+                  name: 'Electricity',
+                  data: [18, 16, 5, 8, 3, 14, 14, 16, 17, 19, 18, 20]
+                },
+                {
+                  name: 'Water',
+                  data: [12, 11, 4, 6, 2, 9, 9, 10, 11, 12, 13, 13]
+                },
+                {
+                  name: 'Gas',
+                  data: [5, 6, 4, 6, 3, 7, 9, 7, 5, 5, 8, 9]
+                }
+              ]}
+              sx={{ height: '100%' }}
+            />
+          </Grid>
+          
+          {/* start overview utilities */}
+          
+          <Grid
+            xs={12}
+            sm={6}
+            lg={3}
+          >
+            <OverviewBill
+              sx={{ height: '100%' }}
+              value="$640"
+              difference="6"
+              positive
+            />
+          </Grid>
           <Grid
             xs={12}
             sm={6}
@@ -71,48 +119,8 @@ const Page = () => (
               dataJSON = {dataJSON}
             />
           </Grid>
-          <Grid
-            xs={12}
-            sm={6}
-            lg={3}
-          >
-            <OverviewTotalProfit
-              sx={{ height: '100%' }}
-              value="$15k"
-            />
-          </Grid>
-          <Grid
-            xs={8}
-          >
-            <OverviewUsage
-              graphs={[
-                {
-                  name: 'Electricity',
-                  data: [18, 16, 5, 8, 3, 14, 14, 16, 17, 19, 18, 20]
-                },
-                {
-                  name: 'Water',
-                  data: [12, 11, 4, 6, 2, 9, 9, 10, 11, 12, 13, 13]
-                },
-                {
-                  name: 'Gas',
-                  data: [5, 6, 4, 6, 3, 7, 9, 7, 5, 5, 8, 9]
-                }
-              ]}
-              sx={{ height: '100%' }}
-            />
-          </Grid>
-          <Grid
-            xs={12}
-            md={6}
-            lg={4}
-          >
-            <OverviewTraffic
-              chartSeries={[100, 325, 215]}
-              labels={['Water','Electricity', 'Gas']}
-              sx={{ height: '100%' }}
-            />
-          </Grid>
+          
+          {/* end overview utilities */}
           <Grid xs={4}>
             <OverviewTip
               tips={["You can save electricity by turning off the lights. Turning off the lights makes you use less electricity!",
