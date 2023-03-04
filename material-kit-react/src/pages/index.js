@@ -12,6 +12,7 @@ import { OverviewTotalProfit } from 'src/sections/overview/overview-total-profit
 import { OverviewTraffic } from 'src/sections/overview/overview-traffic';
 import { OverviewTip } from 'src/sections/overview/overview-tip'
 import { OverviewStat } from 'src/sections/overview/overview-stats'
+import { OverviewUsage } from 'src/sections/overview/overview-usage';
 
 
 const now = new Date();
@@ -82,11 +83,10 @@ const Page = () => (
             />
           </Grid>
           <Grid
-            xs={12}
-            lg={8}
+            xs={8}
           >
-            <OverviewSales
-              chartSeries={[
+            <OverviewUsage
+              graphs={[
                 {
                   name: 'Electricity',
                   data: [18, 16, 5, 8, 3, 14, 14, 16, 17, 19, 18, 20]
