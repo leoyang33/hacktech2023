@@ -64,7 +64,7 @@ export const OverviewTip = (props) => {
             <Typography
               color="text.primary"
               variant="body1"
-              height={'10vh'}
+              height={'25vh'}
             >
               {tips[page-1]}
             </Typography>

@@ -228,9 +228,10 @@ const Page = () => (
           </Grid>
           <Grid xs={4}>
             <OverviewTip
-              tips={["You can save electricity by turning off the lights. Turning off the lights makes you use less electricity!",
-              "Tip 2",
-              "Tip 3"
+              tips={[
+              "Reduce phantom load – Make sure appliances like TV and laptop are truly off when not in use. Plug appliances into power strips and turn off power strips before going to bed each night.",
+              "Turn down the thermostat–  households can save as much as 5-15% a year on their heating and cooling bills by simply turning their thermostat back 10⁰ to 15⁰ for 8 hours a day.",
+              "Use cold water in the washing machine and wash full loads."
               ]}
               type="Electricity"
               sx={{ height: '100%' }}
@@ -238,9 +239,10 @@ const Page = () => (
           </Grid>
           <Grid xs={4}>
             <OverviewTip
-              tips={["You can save water by turning off the water. Turning off the water makes you use less water!",
-              "Tip 2",
-              "Tip 3"
+              tips={["Turn off the water while brushing your teeth and shaving.",
+              "Check toilets for leaks – these can waste over 100 gallons of water per day. Try putting a few drops of food coloring in the toilet tank. If, without flushing, the color starts to appear in the bowl, this is a sign of a leak.",
+              "Sweep driveways and steps with a broom instead of hosing",
+              "Add mulch to plants to conserve moisture. Water plants and lawns during a cool part of the day."
               ]}
               type="Water"
               sx={{ height: '100%' }}
@@ -248,19 +250,19 @@ const Page = () => (
           </Grid>
           <Grid xs={4}>
             <OverviewTip
-              tips={["You can save gas by turning off the gas. Turning off the gas makes you use less gas!",
-              "Tip 2",
-              "Tip 3"
+              tips={["Clean or replace filters on furnaces and air conditioners once a month or as recommended. Dirty filters reduce airflow, making the system less efficient and wasting energy.",
+              "Let heat circulate by checking that curtains, drape, and rugs are not blocking heat registers and vents.",
+              "Turn your hot water tank down to 120 degrees. For every 10 degree reduction in temperature, you can save between 3% and 5% on your water heating costs."
               ]}
               type="Gas"
-              sx={{ height: '35vh' }}
+              sx={{ height: '50vh' }}
             />
           </Grid>
           <Grid xs={4}>
             <OverviewStat
-              stats={["You saved enough water to fill up a swimming pool!",
-              "Stat 2",
-              "Stat 3"
+              stats={["You saved 5000 gallons of water so far this year. That's enough water to fill up a swimming pool!",
+              "You saved 500 kWh of elecricity this month. That's equivalent to 427.5 lbs of carbon emissions you avoided!",
+              "You saved 20 cubic feet of gas this month. That's enough to power the average car for 3.5 months!"
               ]}
               sx={{ height: '100%' }}
             />

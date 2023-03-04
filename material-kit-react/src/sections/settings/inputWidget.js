@@ -86,6 +86,32 @@ export const InputWidget = () => {
             justifyContent="space-between"
             marginTop={"4%"}>
                 <Avatar
+                    sx={{
+                    backgroundColor: 'custom.water',
+                    height: 100,
+                    width: 100
+                    }}
+                    >
+                        <SvgIcon><BeakerIcon /></SvgIcon>
+                    </Avatar>
+                <TextField
+                fullWidth
+                label="Enter water usage (gallons)"
+                name="water"
+                onChange={handleChange}
+                type="water"
+                value={values.water}
+                />
+            </Grid>
+            <Grid
+            container
+            sx={{height: 200}}
+            spacing={3}
+            direction="column"
+            alignItems="center"
+            justifyContent="space-between"
+            marginTop={"4%"}>
+                <Avatar
                 alignItems ="center"
                 sx={{
                 backgroundColor: 'custom.gas',
@@ -102,32 +128,6 @@ export const InputWidget = () => {
                 onChange={handleChange}
                 type="gas"
                 value={values.gas}
-                />
-            </Grid>
-            <Grid
-            container
-            sx={{height: 200}}
-            spacing={3}
-            direction="column"
-            alignItems="center"
-            justifyContent="space-between"
-            marginTop={"4%"}>
-                <Avatar
-                    sx={{
-                    backgroundColor: 'custom.water',
-                    height: 100,
-                    width: 100
-                    }}
-                    >
-                        <SvgIcon><BeakerIcon /></SvgIcon>
-                    </Avatar>
-                <TextField
-                fullWidth
-                label="Enter water usage (gallons)"
-                name="water"
-                onChange={handleChange}
-                type="water"
-                value={values.water}
                 />
             </Grid>
         </Stack>
