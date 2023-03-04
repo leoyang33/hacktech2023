@@ -330,7 +330,7 @@ export const OverviewSales = (props) => {
         title="Usage History"
       />
       <CardContent>
-        <Chart options={options} series={data} type="area" width="100%" />
+        <Chart options={options} series={data} type="area" width="100%" height="350" />
       </CardContent>
       <Divider />
       <CardActions sx={{ justifyContent: "flex-end" }}>
