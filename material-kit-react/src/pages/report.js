@@ -21,7 +21,7 @@ const Page = () => (
       <Container maxWidth="lg">
         <Stack spacing={3}>
           <Typography variant="h4">
-            Report this month's resource usage
+            Report or upload this month's resource usage
           </Typography>
           <InputWidget />
         </Stack>
