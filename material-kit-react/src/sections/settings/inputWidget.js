@@ -170,10 +170,6 @@ export const InputWidget = () => {
             </Grid>
         </Stack>
         <CardActions sx={{ justifyContent: 'flex-end' }}>
-          <Button variant="contained"
-          onClick={handleSubmit}>
-            Enter
-          </Button>
         </CardActions>
         </CardContent>
       </Card>
