@@ -15,97 +15,6 @@ import { Chart } from "src/components/chart";
 import dataJson from "../../data/data.json";
 import { useState, useEffect } from "react";
 
-// const useChartOptions = () => {
-//   const theme = useTheme();
-
-//   return {
-//     chart: {
-//       background: 'transparent',
-//       stacked: false,
-//       toolbar: {
-//         show: false
-//       }
-//     },
-//     colors: [theme.palette.primary.main, alpha(theme.palette.primary.main, 0.25)],
-//     dataLabels: {
-//       enabled: false
-//     },
-//     fill: {
-//       opacity: 1,
-//       type: 'solid'
-//     },
-//     grid: {
-//       borderColor: theme.palette.divider,
-//       strokeDashArray: 2,
-//       xaxis: {
-//         lines: {
-//           show: false
-//         }
-//       },
-//       yaxis: {
-//         lines: {
-//           show: true
-//         }
-//       }
-//     },
-//     legend: {
-//       show: false
-//     },
-//     plotOptions: {
-//       bar: {
-//         columnWidth: '40px'
-//       }
-//     },
-//     stroke: {
-//       colors: ['transparent'],
-//       show: true,
-//       width: 2
-//     },
-//     theme: {
-//       mode: theme.palette.mode
-//     },
-//     xaxis: {
-//       axisBorder: {
-//         color: theme.palette.divider,
-//         show: true
-//       },
-//       axisTicks: {
-//         color: theme.palette.divider,
-//         show: true
-//       },
-//       categories: [
-//         'Jan',
-//         'Feb',
-//         'Mar',
-//         'Apr',
-//         'May',
-//         'Jun',
-//         'Jul',
-//         'Aug',
-//         'Sep',
-//         'Oct',
-//         'Nov',
-//         'Dec'
-//       ],
-//       labels: {
-//         offsetY: 5,
-//         style: {
-//           colors: theme.palette.text.secondary
-//         }
-//       }
-//     },
-//     yaxis: {
-//       labels: {
-//         formatter: (value) => (value > 0 ? `${value}K` : `${value}`),
-//         offsetX: -10,
-//         style: {
-//           colors: theme.palette.text.secondary
-//         }
-//       }
-//     }
-//   };
-// };
-
 const useChartOptions = () => {
   const theme = useTheme();
 
@@ -245,108 +154,189 @@ export const OverviewSales = (props) => {
   const [waterUsage, setWaterUsage] = useState([]);
   const [mean, setMean] = useState(null);
   const [std, setStd] = useState(null);
+  const [graphData, setGraphData] = useState([]);
+  const [options, setOptions] = useState({});
   useEffect(() => {
     const waterUsageValues = energyData.map((obj) => obj.waterUsage);
     setWaterUsage(waterUsageValues);
 
     setMean(computeMean(waterUsage));
     setStd(computeStd(waterUsage));
-  }, [energyData]);
+    const x_vals = getNStd(mean, std, 3, 0.05);
 
-  const x_vals = getNStd(mean, std, 3, 0.05);
-
-  const data = [
-    {
-      name: "Water Usage",
-      data: x_vals.map((element) => ({
-        x: element,
-        y: bellCurve(element, mean, std),
-      })),
-    },
-  ];
-
-  const options = {
-    chart: {
-      height: 350,
-      type: "area",
-    },
-    title: {
-      text: "Water Usage",
-    },
-    xaxis: {
-      type: "numeric",
-      title: {
-        text: "Usage (Gallons)",
+    const temp_data = [
+      {
+        name: "Water Usage",
+        data: x_vals.map((element) => ({
+          x: element,
+          y: bellCurve(element, mean, std),
+        })),
       },
-    },
-    yaxis: {
-      show: false,
-      title: {
-        text: "",
+    ];
+    setGraphData(temp_data);
+    setOptions({
+      chart: {
+        height: "350",
+        type: "area",
       },
-    },
-    dataLabels: {
-      enabled: false,
-    },
-    legend: {
-      show: false,
-    },
-    stroke: {
-      curve: "smooth",
-    },
-    annotations: {
-      points: [
-        {
-          x: 2405,
-          y: 0.001074,
-          marker: {
-            size: 8,
-            fillColor: "#fff",
-            strokeColor: "#255aee",
-            shadeTo: "light",
-            strokeWidth: 2,
-          },
+      title: {
+        text: "Water Usage",
+      },
+      xaxis: {
+        type: "numeric",
+        title: {
+          text: "Usage (Gallons)",
         },
-      ],
-    },
-  };
+      },
+      yaxis: {
+        show: false,
+        title: {
+          text: "",
+        },
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      legend: {
+        show: false,
+      },
+      stroke: {
+        curve: "smooth",
+      },
+      annotations: {
+        points: [
+          {
+            x: 2405,
+            y: 0.001074,
+            marker: {
+              size: 8,
+              fillColor: "#fff",
+              strokeColor: "#255aee",
+              shadeTo: "light",
+              strokeWidth: 2,
+            },
+          },
+        ],
+      },
+    });
+  }, []);
 
+  // const options = ;
+  console.log(graphData);
+  let check = false;
+  if (graphData.length) {
+    if (graphData[0].data[0]["y"]) {
+      check = true;
+    }
+  }
+  console.log(check);
+  if (check == false) {
+    const waterUsageValues = energyData.map((obj) => obj.waterUsage);
+    setWaterUsage(waterUsageValues);
+
+    setMean(computeMean(waterUsage));
+    setStd(computeStd(waterUsage));
+    const x_vals = getNStd(mean, std, 3, 0.05);
+
+    const temp_data = [
+      {
+        name: "Water Usage",
+        data: x_vals.map((element) => ({
+          x: element,
+          y: bellCurve(element, mean, std),
+        })),
+      },
+    ];
+    setGraphData(temp_data);
+    setOptions({
+      chart: {
+        height: "350",
+        type: "area",
+      },
+      title: {
+        text: "Water Usage",
+      },
+      xaxis: {
+        type: "numeric",
+        title: {
+          text: "Usage (Gallons)",
+        },
+      },
+      yaxis: {
+        show: false,
+        title: {
+          text: "",
+        },
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      legend: {
+        show: false,
+      },
+      stroke: {
+        curve: "smooth",
+      },
+      annotations: {
+        points: [
+          {
+            x: 2405,
+            y: 0.001074,
+            marker: {
+              size: 8,
+              fillColor: "#fff",
+              strokeColor: "#255aee",
+              shadeTo: "light",
+              strokeWidth: 2,
+            },
+          },
+        ],
+      },
+    });
+  }
   return (
-    <Card sx={sx}>
-      <CardHeader
-        action={
+    <>
+      <h1>{check}</h1>
+      <Card>
+        <CardHeader
+          action={
+            <Button
+              color="inherit"
+              size="small"
+              startIcon={
+                <SvgIcon fontSize="small">
+                  <ArrowPathIcon />
+                </SvgIcon>
+              }
+            >
+              Sync
+            </Button>
+          }
+          title="Usage History"
+        />
+
+        {graphData.length && graphData[0].data.length}
+        <CardContent>
+          {check && (
+            <Chart options={options} series={graphData} type="area" width="100%" height="350" />
+          )}
+        </CardContent>
+        <Divider />
+        <CardActions sx={{ justifyContent: "flex-end" }}>
           <Button
             color="inherit"
-            size="small"
-            startIcon={
+            endIcon={
               <SvgIcon fontSize="small">
-                <ArrowPathIcon />
+                <ArrowRightIcon />
               </SvgIcon>
             }
+            size="small"
           >
-            Sync
+            Overview
           </Button>
-        }
-        title="Usage History"
-      />
-      <CardContent>
-        <Chart options={options} series={data} type="area" width="100%" height="350" />
-      </CardContent>
-      <Divider />
-      <CardActions sx={{ justifyContent: "flex-end" }}>
-        <Button
-          color="inherit"
-          endIcon={
-            <SvgIcon fontSize="small">
-              <ArrowRightIcon />
-            </SvgIcon>
-          }
-          size="small"
-        >
-          Overview
-        </Button>
-      </CardActions>
-    </Card>
+        </CardActions>
+      </Card>
+    </>
   );
 };
 
