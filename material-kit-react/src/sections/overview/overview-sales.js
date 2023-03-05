@@ -162,7 +162,7 @@ export const OverviewSales = (props) => {
   const [graphData, setGraphData] = useState([]);
   const [options, setOptions] = useState({});
   const [utility, setUtility] = useState("water");
-  const [color, setColor] = useState("#ffca3a");
+  const [color, setColor] = useState("#1982C4");
   const [point, setPoint] = useState({});
 
   const utilMap = {
