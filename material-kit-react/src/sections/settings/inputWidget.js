@@ -38,6 +38,7 @@ export const InputWidget = () => {
   const handleSubmit = useCallback(
     (event) => {
       event.preventDefault();
+      setValues({electric: '', gas : '', water: ''})
     },
     []
   );
@@ -55,7 +56,7 @@ export const InputWidget = () => {
           >
             <Grid
             container
-            sx={{height: 200}}
+            sx={{height: 250}}
             spacing={3}
             direction="column"
             alignItems="center"
@@ -79,10 +80,56 @@ export const InputWidget = () => {
                 type="electric"
                 value={values.electric}
                 />
+                <Button
+                  variant="contained"
+                  component="label"
+                >
+                  Upload Electric Bill
+                  <input
+                    type="file"
+                    hidden
+                  />
+                </Button>
             </Grid>
             <Grid
             container
-            sx={{height: 200}}
+            sx={{height: 250}}
+            spacing={3}
+            direction="column"
+            alignItems="center"
+            justifyContent="space-between"
+            marginTop={"4%"}>
+                <Avatar
+                    sx={{
+                    backgroundColor: 'custom.water',
+                    height: 100,
+                    width: 100
+                    }}
+                    >
+                        <SvgIcon><OpacityIcon /></SvgIcon>
+                    </Avatar>
+                <TextField
+                fullWidth
+                label="Enter water usage (gallons)"
+                name="water"
+                onChange={handleChange}
+                type="water"
+                value={values.water}
+                />
+                <Button
+                  variant="contained"
+                  component="label"
+                >
+                  Upload Water Bill
+                  <input
+                    type="file"
+                    hidden
+                  />
+                </Button>
+            </Grid>
+            <Grid
+            container
+            sx={{height: 250}}
             spacing={3}
             direction="column"
             alignItems="center"
@@ -106,36 +153,21 @@ export const InputWidget = () => {
                 type="gas"
                 value={values.gas}
                 />
-            </Grid>
-            <Grid
-            container
-            sx={{height: 200}}
-            spacing={3}
-            direction="column"
-            alignItems="center"
-            justifyContent="space-between"
-            marginTop={"4%"}>
-                <Avatar
-                    sx={{
-                    backgroundColor: 'custom.water',
-                    height: 100,
-                    width: 100
-                    }}
-                    >
-                        <SvgIcon><OpacityIcon /></SvgIcon>
-                    </Avatar>
-                <TextField
-                fullWidth
-                label="Enter water usage (gallons)"
-                name="water"
-                onChange={handleChange}
-                type="water"
-                value={values.water}
-                />
+                <Button
+                  variant="contained"
+                  component="label"
+                >
+                  Upload Gas Bill
+                  <input
+                    type="file"
+                    hidden
+                  />
+                </Button>
             </Grid>
         </Stack>
         <CardActions sx={{ justifyContent: 'flex-end' }}>
-          <Button variant="contained">
+          <Button variant="contained"
+          onClick={handleSubmit}>
             Enter
           </Button>
         </CardActions>
