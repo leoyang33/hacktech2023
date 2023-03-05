@@ -61,7 +61,7 @@ export const items = [
     ),
   },
   {
-    title: "About Us",
+    title: "About Zap",
     path: "/about",
     icon: (
       <SvgIcon fontSize="small">
