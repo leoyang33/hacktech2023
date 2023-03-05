@@ -41,12 +41,13 @@ const iconMap = {
 const colorMap = {
   Electricity: 'custom.electricity',
   Water: 'custom.water',
-  Gas: 'custom.gas'
+  Gas: 'custom.gas',
+  None: 'custom.grey'
 };
 
 
-export const GlobalStat = (props) => {
-  const { title, text, type, sx } = props;
+export const TextWidget = (props) => {
+  const { title, text, sx } = props;
   const [page, setPage] = React.useState(1);
     const handleChange = (event, value) => {
         setPage(value);
@@ -63,15 +64,6 @@ export const GlobalStat = (props) => {
             >
               {title} 
             </Typography>
-            <Avatar
-            sx={{
-              backgroundColor: colorMap[type],
-              height: 56,
-              width: 56
-            }}
-            >
-              {iconMap[type]}
-            </Avatar>
           </Grid>
           <Grid container paddingTop={5}>
             <Typography
@@ -102,8 +94,8 @@ export const GlobalStat = (props) => {
 };
 
 
-GlobalStat.propTypes = {
-  tips: PropTypes.array.isRequired,
-  type: PropTypes.string.isRequired,
+TextWidget.propTypes = {
+  title: PropTypes.string,
+  text: PropTypes.string.isRequired,
   sx: PropTypes.object
 };

@@ -103,7 +103,8 @@ export const GlobalStat = (props) => {
 
 
 GlobalStat.propTypes = {
-  tips: PropTypes.array.isRequired,
+  title: PropTypes.string,
+  text: PropTypes.string,
   type: PropTypes.string.isRequired,
   sx: PropTypes.object
 };

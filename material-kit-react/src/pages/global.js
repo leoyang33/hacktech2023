@@ -3,7 +3,8 @@ import { Box, Container, Stack, Typography, Grid } from '@mui/material';
 import { SettingsNotifications } from 'src/sections/settings/settings-notifications';
 import { InputWidget } from 'src/sections/settings/inputWidget';
 import { Layout as DashboardLayout } from 'src/layouts/dashboard/layout';
-import { GlobalStat } from 'src/sections/global/globalStat'
+import { GlobalStat } from 'src/sections/global/globalStat';
+import { TextWidget } from 'src/sections/global/textWidget';
 
 const Page = () => (
   <>
@@ -56,6 +57,11 @@ const Page = () => (
           </Grid>
           </Grid>
         </Stack>
+      </Container>
+      <Container>
+        <TextWidget
+        title="TEst"
+        text= "butter butter butter"/>
       </Container>
     </Box>
   </>
