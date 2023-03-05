@@ -344,7 +344,7 @@ export const OverviewSales = (props) => {
               Sync
             </Button>
           }
-          title="Usage History"
+          title="Usage Distribution for your household size in California"
         />
         <Grid justify="center" alignItems="center" container justifyContent={"center"}>
           <Stack direction="row" spacing={20}>

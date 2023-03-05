@@ -94,7 +94,7 @@ export const LeaderboardNeighbourhoodLeaderboard = (props) => {
 
   return (
     <Card sx={sx}>
-      <CardHeader title="Neighborhood Leaderboard" />
+      <CardHeader title="Friend Leaderboard" />
       <Typography variant='body1' paddingLeft={3} paddingBottom={2}>How you rank among your friends</Typography>
       <Scrollbar sx={{ flexGrow: 1 }}>
         <Box>
