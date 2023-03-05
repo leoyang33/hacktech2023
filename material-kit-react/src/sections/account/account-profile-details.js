@@ -255,7 +255,7 @@ export const AccountProfileDetails = () => {
     firstName: 'Krish',
     lastName: 'Mehta',
     email: 'kmmehta@caltech.edu',
-    householdSize: 1,
+    householdSize: 7,
     state: 'CA',
     city: 'Pasadena'
   });
