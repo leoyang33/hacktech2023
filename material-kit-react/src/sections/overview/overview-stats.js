@@ -40,6 +40,8 @@ export const OverviewStat = (props) => {
               color="text.primary"
               variant="body1"
               height={'10vh'}
+              paddingLeft = {"10px"}
+              paddingRight = {"10px"}
             >
               {stats[page-1]}
             </Typography>

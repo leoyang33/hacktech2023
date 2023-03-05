@@ -46,7 +46,7 @@ export const OverviewTip = (props) => {
     <Card sx={sx}>
       <CardContent sx={sx}>
         <Grid container spacing={5} direction="column" justifyContent="space-between">
-          <Grid container spacing={3} justifyContent="space-between" alignItems="center" >
+          <Grid container spacing={3} justifyContent="space-between" alignItems="center">
             <Typography
               color="text.secondary"
               variant="h4"
@@ -68,6 +68,8 @@ export const OverviewTip = (props) => {
               color="text.primary"
               variant="body1"
               height={'25vh'}
+              paddingLeft={"10px"}
+              paddingRight={"10px"}
             >
               {tips[page-1]}
             </Typography>
