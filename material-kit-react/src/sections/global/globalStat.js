@@ -73,11 +73,11 @@ export const GlobalStat = (props) => {
               {iconMap[type]}
             </Avatar>
           </Grid>
-          <Grid container paddingTop={5}>
+          <Grid container paddingTop={5}
+          display='flex'>
             <Typography
               color="text.primary"
               variant="body1"
-              height={'15vh'}
               margin={3}
             >
               {text}

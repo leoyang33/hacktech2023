@@ -52,7 +52,16 @@ export const items = [
     ),
   },
   {
-    title: "About Us",
+    title: "Account",
+    path: "/account",
+    icon: (
+      <SvgIcon fontSize="small">
+        <UserIcon />
+      </SvgIcon>
+    ),
+  },
+  {
+    title: "About Zap",
     path: "/about",
     icon: (
       <SvgIcon fontSize="small">
@@ -78,15 +87,7 @@ export const items = [
   //     </SvgIcon>
   //   ),
   // },
-  // {
-  //   title: "Account",
-  //   path: "/account",
-  //   icon: (
-  //     <SvgIcon fontSize="small">
-  //       <UserIcon />
-  //     </SvgIcon>
-  //   ),
-  // },
+  
   // {
   //   title: "Settings",
   //   path: "/settings",
@@ -123,31 +124,31 @@ export const items = [
   //     </SvgIcon>
   //   )
   // },
-  {
-    title: 'Map',
-    path: '/map',
-    icon: (
-      <SvgIcon fontSize="small">
-        <XCircleIcon />
-      </SvgIcon>
-    )
-  },
-  {
-    title: 'KrishTest',
-    path: '/testPage',
-    icon: (
-      <SvgIcon fontSize="small">
-        <XCircleIcon />
-      </SvgIcon>
-    )
-  },
-  {
-    title: 'Test Page',
-    path: '/testpage',
-    icon: (
-      <SvgIcon fontSize="small">
-        <XCircleIcon />
-      </SvgIcon>
-    )
-  }
+  // {
+  //   title: 'Map',
+  //   path: '/map',
+  //   icon: (
+  //     <SvgIcon fontSize="small">
+  //       <XCircleIcon />
+  //     </SvgIcon>
+  //   )
+  // },
+  // {
+  //   title: 'KrishTest',
+  //   path: '/testPage',
+  //   icon: (
+  //     <SvgIcon fontSize="small">
+  //       <XCircleIcon />
+  //     </SvgIcon>
+  //   )
+  // },
+  // {
+  //   title: 'Test Page',
+  //   path: '/testpage',
+  //   icon: (
+  //     <SvgIcon fontSize="small">
+  //       <XCircleIcon />
+  //     </SvgIcon>
+  //   )
+  // }
 ];
