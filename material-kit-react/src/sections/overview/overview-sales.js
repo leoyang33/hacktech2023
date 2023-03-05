@@ -10,15 +10,15 @@ import {
   Divider,
   SvgIcon,
   Grid,
-  Stack
+  Stack,
 } from "@mui/material";
 import { alpha, useTheme } from "@mui/material/styles";
 import { Chart } from "src/components/chart";
 import dataJson from "../../data/data.json";
 import { useState, useEffect } from "react";
-import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
-import OpacityIcon from '@mui/icons-material/Opacity';
-import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
+import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
+import OpacityIcon from "@mui/icons-material/Opacity";
+import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
 
 const useChartOptions = () => {
   const theme = useTheme();
@@ -162,22 +162,72 @@ export const OverviewSales = (props) => {
   const [graphData, setGraphData] = useState([]);
   const [options, setOptions] = useState({});
   const [utility, setUtility] = useState("water");
+  const [color, setColor] = useState("#ffca3a");
+  const [point, setPoint] = useState({});
+
+  const utilMap = {
+    electric: "#ffca3a",
+    gas: "#ff595e",
+    water: "#1982C4",
+  };
 
   const handleClick = (util) => {
     setUtility(util);
-  }
+    setColor(utilMap[util]);
+    const usage = energyData.map((obj) => obj[`${utility}Usage`]);
+    setWaterUsage(usage);
+    setMean(computeMean(usage));
+    setStd(computeStd(usage));
+    if (util === "gas") {
+      setPoint({
+        x: 47120,
+        y: 0.00098,
+        marker: {
+          size: 8,
+          fillColor: "#fff",
+          strokeColor: "#255aee",
+          shadeTo: "light",
+          strokeWidth: 2,
+        },
+      });
+    } else if (util === "water") {
+      setPoint({
+        x: 2405,
+        y: 0.001074,
+        marker: {
+          size: 8,
+          fillColor: "#fff",
+          strokeColor: "#255aee",
+          shadeTo: "light",
+          strokeWidth: 2,
+        },
+      });
+    } else {
+      setPoint({
+        x: 2405,
+        y: 0.001074,
+        marker: {
+          size: 8,
+          fillColor: "#fff",
+          strokeColor: "#255aee",
+          shadeTo: "light",
+          strokeWidth: 2,
+        },
+      });
+    }
+  };
 
   useEffect(() => {
-    const waterUsageValues = energyData.map((obj) => obj.waterUsage);
-    setWaterUsage(waterUsageValues);
+    // const waterUsageValues = energyData.map((obj) => obj[`${utility}Usage`]);
+    // setWaterUsage(waterUsageValues);
 
-    setMean(computeMean(waterUsage));
-    setStd(computeStd(waterUsage));
+    // setMean(computeMean(waterUsage));
+    // setStd(computeStd(waterUsage));
     const x_vals = getNStd(mean, std, 3, 0.05);
 
     const temp_data = [
       {
-        name: "Water Usage",
+        name: `${utility} Usage`,
         data: x_vals.map((element) => ({
           x: element,
           y: bellCurve(element, mean, std),
@@ -191,12 +241,12 @@ export const OverviewSales = (props) => {
         type: "area",
       },
       title: {
-        text: "Water Usage",
+        text: `${utility.charAt(0).toUpperCase() + utility.slice(1)} Usage`,
       },
       xaxis: {
         type: "numeric",
         title: {
-          text: "Usage (Gallons)",
+          text: "Usage",
         },
       },
       yaxis: {
@@ -214,44 +264,31 @@ export const OverviewSales = (props) => {
       stroke: {
         curve: "smooth",
       },
+      colors: [color],
       annotations: {
-        points: [
-          {
-            x: 2405,
-            y: 0.001074,
-            marker: {
-              size: 8,
-              fillColor: "#fff",
-              strokeColor: "#255aee",
-              shadeTo: "light",
-              strokeWidth: 2,
-            },
-          },
-        ],
+        points: [point],
       },
     });
-  }, []);
+  }, [color]);
 
-  // const options = ;
-  console.log(graphData);
   let check = false;
   if (graphData.length) {
     if (graphData[0].data[0]["y"]) {
       check = true;
     }
   }
-  console.log(check);
-  if (check == false) {
-    const waterUsageValues = energyData.map((obj) => obj.waterUsage);
-    setWaterUsage(waterUsageValues);
 
-    setMean(computeMean(waterUsage));
-    setStd(computeStd(waterUsage));
+  if (check == false) {
+    // const waterUsageValues = energyData.map((obj) => obj[`${utility}Usage`]);
+    // setWaterUsage(waterUsageValues);
+
+    // setMean(computeMean(waterUsage));
+    // setStd(computeStd(waterUsage));
     const x_vals = getNStd(mean, std, 3, 0.05);
 
     const temp_data = [
       {
-        name: "Water Usage",
+        name: `${utility} Usage`,
         data: x_vals.map((element) => ({
           x: element,
           y: bellCurve(element, mean, std),
@@ -265,12 +302,12 @@ export const OverviewSales = (props) => {
         type: "area",
       },
       title: {
-        text: "Water Usage",
+        text: `${utility.charAt(0).toUpperCase() + utility.slice(1)} Usage`,
       },
       xaxis: {
         type: "numeric",
         title: {
-          text: "Usage (Gallons)",
+          text: "Usage",
         },
       },
       yaxis: {
@@ -288,20 +325,9 @@ export const OverviewSales = (props) => {
       stroke: {
         curve: "smooth",
       },
+      colors: [color],
       annotations: {
-        points: [
-          {
-            x: 2405,
-            y: 0.001074,
-            marker: {
-              size: 8,
-              fillColor: "#fff",
-              strokeColor: "#255aee",
-              shadeTo: "light",
-              strokeWidth: 2,
-            },
-          },
-        ],
+        points: [point],
       },
     });
   }
@@ -325,12 +351,46 @@ export const OverviewSales = (props) => {
           title="Usage History"
         />
         <Grid justify="center" alignItems="center" container justifyContent={"center"}>
-            <Stack direction="row" spacing={20}>
-              <Button sx={{ color: "custom.gas", backgroundColor: utility == "gas" ? "custom.gas2" : "", minWidth: '300px', '&:hover': {backgroundColor: utility == "gas" ? "custom.gas2" : "transparent"}}} onClick={(e) => handleClick("gas")}><LocalFireDepartmentIcon /></Button>
-              <Button sx={{ color: "custom.water", backgroundColor: utility == "water" ? "custom.water2" : "", minWidth: '300px', '&:hover': {backgroundColor: utility == "water" ? "custom.water2" : "transparent"}}} onClick={(e) => handleClick("water")}><OpacityIcon /></Button>
-              <Button sx={{ color: "custom.electricity", backgroundColor: utility == "electric" ? "custom.electricity2" : "", minWidth: '300px', '&:hover': {backgroundColor: utility == "electric" ? "custom.electricity2" : "transparent"}}} onClick={(e) => handleClick("electric")}><ElectricBoltIcon /></Button>
-            </Stack>
-          </Grid>
+          <Stack direction="row" spacing={20}>
+            <Button
+              sx={{
+                color: "custom.gas",
+                backgroundColor: utility == "gas" ? "custom.gas2" : "",
+                minWidth: "300px",
+                "&:hover": { backgroundColor: utility == "gas" ? "custom.gas2" : "transparent" },
+              }}
+              onClick={(e) => handleClick("gas")}
+            >
+              <LocalFireDepartmentIcon />
+            </Button>
+            <Button
+              sx={{
+                color: "custom.water",
+                backgroundColor: utility == "water" ? "custom.water2" : "",
+                minWidth: "300px",
+                "&:hover": {
+                  backgroundColor: utility == "water" ? "custom.water2" : "transparent",
+                },
+              }}
+              onClick={(e) => handleClick("water")}
+            >
+              <OpacityIcon />
+            </Button>
+            <Button
+              sx={{
+                color: "custom.electricity",
+                backgroundColor: utility == "electric" ? "custom.electricity2" : "",
+                minWidth: "300px",
+                "&:hover": {
+                  backgroundColor: utility == "electric" ? "custom.electricity2" : "transparent",
+                },
+              }}
+              onClick={(e) => handleClick("electric")}
+            >
+              <ElectricBoltIcon />
+            </Button>
+          </Stack>
+        </Grid>
 
         <CardContent>
           {check && (
