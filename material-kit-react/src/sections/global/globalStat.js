@@ -1,24 +1,25 @@
-import PropTypes from 'prop-types';
-import { Box, Container, Unstable_Grid2 as Grid } from '@mui/material';
+import PropTypes from "prop-types";
+import { Box, Container, Unstable_Grid2 as Grid } from "@mui/material";
 import { BoltIcon, BeakerIcon, FireIcon } from "@heroicons/react/24/solid";
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import React, { useState } from 'react';
-import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
-import OpacityIcon from '@mui/icons-material/Opacity';
-import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
-import {  Avatar,
-    Button,
-    Card,
-    CardActions,
-    CardContent,
-    Pagination,
-    Stack,
-    SvgIcon,
-    TextField,
-    Typography
-  } from '@mui/material';
-import {EmailShareButton, FacebookShareButton, TwitterShareButton} from "react-share";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import React, { useState } from "react";
+import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
+import OpacityIcon from "@mui/icons-material/Opacity";
+import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
+import {
+  Avatar,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  Pagination,
+  Stack,
+  SvgIcon,
+  TextField,
+  Typography,
+} from "@mui/material";
+import { EmailShareButton, FacebookShareButton, TwitterShareButton } from "react-share";
 
 const iconMap = {
   Electricity: (
@@ -34,64 +35,56 @@ const iconMap = {
   Gas: (
     <SvgIcon>
       <LocalFireDepartmentIcon />
-    </SvgIcon>  
-  )
+    </SvgIcon>
+  ),
 };
 
 const colorMap = {
-  Electricity: 'custom.electricity',
-  Water: 'custom.water',
-  Gas: 'custom.gas'
+  Electricity: "custom.electricity",
+  Water: "custom.water",
+  Gas: "custom.gas",
 };
-
 
 export const GlobalStat = (props) => {
   const { title, text, type, sx } = props;
   const [page, setPage] = React.useState(1);
-    const handleChange = (event, value) => {
-        setPage(value);
-    };
+  const handleChange = (event, value) => {
+    setPage(value);
+  };
   return (
     <Card sx={sx}>
       <CardContent sx={sx}>
         <Grid container spacing={5} direction="column" justifyContent="space-between">
-          <Grid container spacing={5} justifyContent="space-between" alignItems="center" >
-            <Typography
-              color="text.secondary"
-              variant="h4"
-              paddingLeft={2}
-            >
-              {title} 
+          <Grid container spacing={5} justifyContent="space-between" alignItems="center">
+            <Typography color="text.secondary" variant="h4" paddingLeft={2}>
+              {title}
             </Typography>
             <Avatar
-            sx={{
-              backgroundColor: colorMap[type],
-              height: 56,
-              width: 56
-            }}
+              sx={{
+                backgroundColor: colorMap[type],
+                height: 56,
+                width: 56,
+              }}
             >
               {iconMap[type]}
             </Avatar>
           </Grid>
-          <Grid container paddingTop={3}
-          display='flex'>
-            <Typography
-              color="text.primary"
-              variant="body1"
-              margin={3}
-            >
+          <Grid container paddingTop={3}>
+            <Typography color="text.primary" variant="body1" margin={3}>
               {text}
             </Typography>
           </Grid>
-          <Grid container justifyContent='space-between' paddingTop={5}>
-            <Grid container
-            justifyContent='flex-end'
-            marginLeft={2}>
+          <Grid container justifyContent="space-between" paddingTop={5}>
+            <Grid container justifyContent="flex-end" marginLeft={2}>
               <FacebookShareButton url={"Zap.com"} quote="test" hashtag="Zap">
-                <FacebookIcon/>
+                <FacebookIcon />
               </FacebookShareButton>
-              <TwitterShareButton url={"Zap.com"} hashtags={["ecofriendly"]} title={"From Zap I learned: " + text}>
-                <TwitterIcon/>
+              <TwitterShareButton
+                url={"Zap.com"}
+                hashtags={["ecofriendly"]}
+                title={"From Zap I learned: " + text}
+              >
+                <TwitterIcon />
               </TwitterShareButton>
             </Grid>
           </Grid>
@@ -101,10 +94,9 @@ export const GlobalStat = (props) => {
   );
 };
 
-
 GlobalStat.propTypes = {
   title: PropTypes.string,
   text: PropTypes.string,
   type: PropTypes.string.isRequired,
-  sx: PropTypes.object
+  sx: PropTypes.object,
 };

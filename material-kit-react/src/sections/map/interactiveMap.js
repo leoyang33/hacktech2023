@@ -102,7 +102,7 @@ export const InteractiveMap = (props) => {
       <CardContent>
       <CardHeader title={"Interactive Map"}></CardHeader>
       <Divider />
-      <Typography varient="h2" sx={{paddingBottom: '40px', paddingTop: "25px"}}>
+      <Typography varient="h2" sx={{paddingBottom: '40px', paddingTop: "25px", paddingLeft: "25px"}}>
         Use this map to see how much electricity, water, and gas a household in each state is using on average per month!
       </Typography>
           <Grid 
