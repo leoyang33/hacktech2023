@@ -24,7 +24,7 @@ const Page = () => (
   <>
     <Head>
       <title>
-        Overview
+        Dashboard | Zap
       </title>
     </Head>
     <Box
