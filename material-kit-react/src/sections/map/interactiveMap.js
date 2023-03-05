@@ -1,4 +1,4 @@
-import { Avatar, Card, CardContent, CardHeader, Chip, Stack, SvgIcon, Typography, Grid, Box, Button, IconButton } from '@mui/material';
+import { Avatar, Card, CardContent, CardHeader, Chip, Stack, SvgIcon, Typography, Grid, Box, Button, IconButton, Divider } from '@mui/material';
 import USAMap from "react-usa-map";
 import stateUsageJSON from '../../data/stateUsage.json';
 import statesJSON from '../../data/states.json';
@@ -100,7 +100,11 @@ export const InteractiveMap = (props) => {
   return (
     <Card sx={16}>
       <CardContent>
-        <CardHeader title={"Interactive Map"} sx={{paddingBottom: "50px"}}/>
+      <CardHeader title={"Interactive Map"}></CardHeader>
+      <Divider />
+      <Typography varient="h2" sx={{paddingBottom: '40px', paddingTop: "25px"}}>
+        Vivian Insert Text Here
+      </Typography>
           <Grid 
             container 
             spacing={3}
