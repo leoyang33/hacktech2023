@@ -296,7 +296,6 @@ export const OverviewSales = (props) => {
   }
   return (
     <>
-      <h1>{check}</h1>
       <Card>
         <CardHeader
           action={
