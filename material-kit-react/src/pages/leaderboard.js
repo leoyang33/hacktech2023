@@ -1,9 +1,10 @@
 import Head from "next/head";
 import React from "react";
-import { Box, Container, Unstable_Grid2 as Grid } from "@mui/material";
+import { Box, Stack, Container, Typography, Unstable_Grid2 as Grid } from "@mui/material";
 import { Layout as DashboardLayout } from "src/layouts/dashboard/layout";
 import { LeaderboardBellCurve } from "src/sections/leaderboard/LeaderboardBellCurve";
 import { OverviewSales } from "src/sections/overview/overview-sales";
+import {GlobalStat} from "src/sections/global/globalStat";
 const Page = () => (
   <>
     {/* <Head>
