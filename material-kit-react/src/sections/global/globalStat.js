@@ -55,7 +55,7 @@ export const GlobalStat = (props) => {
     <Card sx={sx}>
       <CardContent sx={sx}>
         <Grid container spacing={5} direction="column" justifyContent="space-between">
-          <Grid container spacing={3} justifyContent="space-between" alignItems="center" >
+          <Grid container spacing={5} justifyContent="space-between" alignItems="center" >
             <Typography
               color="text.secondary"
               variant="h4"
@@ -73,7 +73,7 @@ export const GlobalStat = (props) => {
               {iconMap[type]}
             </Avatar>
           </Grid>
-          <Grid container paddingTop={5}
+          <Grid container paddingTop={3}
           display='flex'>
             <Typography
               color="text.primary"
@@ -87,10 +87,10 @@ export const GlobalStat = (props) => {
             <Grid container
             justifyContent='flex-end'
             marginLeft={2}>
-              <FacebookShareButton url={"google.com"} quote="test" hashtag="Zap">
+              <FacebookShareButton url={"Zap.com"} quote="test" hashtag="Zap">
                 <FacebookIcon/>
               </FacebookShareButton>
-              <TwitterShareButton url={"google.com"} hashtags={["ecofriendly"]} title={"From Zap I learned: " + text}>
+              <TwitterShareButton url={"Zap.com"} hashtags={["ecofriendly"]} title={"From Zap I learned: " + text}>
                 <TwitterIcon/>
               </TwitterShareButton>
             </Grid>

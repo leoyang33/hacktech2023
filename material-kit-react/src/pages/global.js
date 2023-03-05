@@ -65,8 +65,8 @@ const Page = () => (
       </Container>
       <Container>
         <TextWidget
-        title="Let's work together"
-        text= "Resource management and efficiency is one of the key ways to meet energy service demand while mitigating global warming. Just a 1% decrease in state-wide residential energy usage can decrease greenhouse gas emissions by 940,000 metric tons a year."/>
+        title="Let's work together!"
+        text= "Resource management and efficiency is one of the key ways to meet energy service demand while mitigating global warming. Just a 1% decrease in nationwide residential energy usage can decrease greenhouse gas emissions by 46 million metric tons a year."/>
       </Container>
     </Box>
   </>
