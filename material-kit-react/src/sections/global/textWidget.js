@@ -65,11 +65,12 @@ export const TextWidget = (props) => {
               {title} 
             </Typography>
           </Grid>
-          <Grid container paddingTop={5}>
+          <Grid container
+          display="flex"
+           paddingTop={5}>
             <Typography
               color="text.primary"
               variant="body1"
-              height={'15vh'}
               margin={3}
             >
               {text}
