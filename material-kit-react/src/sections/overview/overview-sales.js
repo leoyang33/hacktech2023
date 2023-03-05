@@ -174,10 +174,6 @@ export const OverviewSales = (props) => {
   const handleClick = (util) => {
     setUtility(util);
     setColor(utilMap[util]);
-    const usage = energyData.map((obj) => obj[`${utility}Usage`]);
-    setWaterUsage(usage);
-    setMean(computeMean(usage));
-    setStd(computeStd(usage));
     if (util === "gas") {
       setPoint({
         x: 47120,
@@ -218,11 +214,11 @@ export const OverviewSales = (props) => {
   };
 
   useEffect(() => {
-    // const waterUsageValues = energyData.map((obj) => obj[`${utility}Usage`]);
-    // setWaterUsage(waterUsageValues);
+    const waterUsageValues = energyData.map((obj) => obj[`${utility}Usage`]);
+    setWaterUsage(waterUsageValues);
 
-    // setMean(computeMean(waterUsage));
-    // setStd(computeStd(waterUsage));
+    setMean(computeMean(waterUsage));
+    setStd(computeStd(waterUsage));
     const x_vals = getNStd(mean, std, 3, 0.05);
 
     const temp_data = [
@@ -279,11 +275,11 @@ export const OverviewSales = (props) => {
   }
 
   if (check == false) {
-    // const waterUsageValues = energyData.map((obj) => obj[`${utility}Usage`]);
-    // setWaterUsage(waterUsageValues);
+    const waterUsageValues = energyData.map((obj) => obj[`${utility}Usage`]);
+    setWaterUsage(waterUsageValues);
 
-    // setMean(computeMean(waterUsage));
-    // setStd(computeStd(waterUsage));
+    setMean(computeMean(waterUsage));
+    setStd(computeStd(waterUsage));
     const x_vals = getNStd(mean, std, 3, 0.05);
 
     const temp_data = [
