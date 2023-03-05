@@ -87,10 +87,10 @@ export const GlobalStat = (props) => {
             <Grid container
             justifyContent='flex-end'
             marginLeft={2}>
-              <FacebookShareButton url={"google.com"} quote="test" hashtag="TODO">
+              <FacebookShareButton url={"google.com"} quote="test" hashtag="Zap">
                 <FacebookIcon/>
               </FacebookShareButton>
-              <TwitterShareButton url={"google.com"} hashtags={["ecofriendly"]} title={"From TODO I learned: " + text}>
+              <TwitterShareButton url={"google.com"} hashtags={["ecofriendly"]} title={"From Zap I learned: " + text}>
                 <TwitterIcon/>
               </TwitterShareButton>
             </Grid>

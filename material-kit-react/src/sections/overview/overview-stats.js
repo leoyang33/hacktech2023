@@ -48,10 +48,10 @@ export const OverviewStat = (props) => {
             <Pagination count={stats.length} page={page} 
                     onChange={handleChange} siblingCount={0} boundaryCount={0}/>
             <Grid container justifyContent='flex-end'>
-              <FacebookShareButton url={"google.com"} quote="test" hashtag="TODO">
+              <FacebookShareButton url={"google.com"} quote="test" hashtag="Zap">
                 <FacebookIcon/>
               </FacebookShareButton>
-              <TwitterShareButton url={"google.com"} hashtags={["ecofriendly"]} title={"From TODO I learned: " + stats[page-1]}>
+              <TwitterShareButton url={"google.com"} hashtags={["ecofriendly", "Zap"]} title={"From Zap I learned: " + stats[page-1]}>
                 <TwitterIcon/>
               </TwitterShareButton>
             </Grid>

@@ -69,9 +69,10 @@ export const SideNav = (props) => {
             <div>
               <Typography
                 color="inherit"
-                variant="subtitle1"
+                variant="h3"
+                align="center"
               >
-                Our Website
+                Zap
               </Typography>
               
             </div>

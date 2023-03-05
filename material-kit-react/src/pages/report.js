@@ -8,7 +8,7 @@ const Page = () => (
   <>
     <Head>
       <title>
-        Upload Usage
+        Upload Usage | Zap
       </title>
     </Head>
     <Box

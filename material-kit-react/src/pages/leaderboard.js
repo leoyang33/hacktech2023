@@ -12,7 +12,7 @@ const Page = () => (
     <p>Here</p>
     <Chart height={350} options={useChartOptions()} series={chartSeries} type="bar" width="100%" /> */}
     <Head>
-      <title>Leaderboard</title>
+      <title>Leaderboard | Zap</title>
     </Head>
     {/* <LeaderboardBellCurve sx={{ height: "100%" }} /> */}
     <Box
