@@ -9,11 +9,16 @@ import {
   CardHeader,
   Divider,
   SvgIcon,
+  Grid,
+  Stack
 } from "@mui/material";
 import { alpha, useTheme } from "@mui/material/styles";
 import { Chart } from "src/components/chart";
 import dataJson from "../../data/data.json";
 import { useState, useEffect } from "react";
+import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
+import OpacityIcon from '@mui/icons-material/Opacity';
+import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 
 const useChartOptions = () => {
   const theme = useTheme();
@@ -156,6 +161,12 @@ export const OverviewSales = (props) => {
   const [std, setStd] = useState(null);
   const [graphData, setGraphData] = useState([]);
   const [options, setOptions] = useState({});
+  const [utility, setUtility] = useState("water");
+
+  const handleClick = (util) => {
+    setUtility(util);
+  }
+
   useEffect(() => {
     const waterUsageValues = energyData.map((obj) => obj.waterUsage);
     setWaterUsage(waterUsageValues);
@@ -313,6 +324,14 @@ export const OverviewSales = (props) => {
           }
           title="Usage History"
         />
+        <Grid justify="center" alignItems="center" container justifyContent={"center"}>
+            <Stack direction="row" spacing={20}>
+              <Button sx={{ color: "custom.gas", backgroundColor: utility == "gas" ? "custom.gas2" : "", minWidth: '300px', '&:hover': {backgroundColor: utility == "gas" ? "custom.gas2" : "transparent"}}} onClick={(e) => handleClick("gas")}><LocalFireDepartmentIcon /></Button>
+              <Button sx={{ color: "custom.water", backgroundColor: utility == "water" ? "custom.water2" : "", minWidth: '300px', '&:hover': {backgroundColor: utility == "water" ? "custom.water2" : "transparent"}}} onClick={(e) => handleClick("water")}><OpacityIcon /></Button>
+              <Button sx={{ color: "custom.electricity", backgroundColor: utility == "electric" ? "custom.electricity2" : "", minWidth: '300px', '&:hover': {backgroundColor: utility == "electric" ? "custom.electricity2" : "transparent"}}} onClick={(e) => handleClick("electric")}><ElectricBoltIcon /></Button>
+            </Stack>
+          </Grid>
+
         <CardContent>
           {check && (
             <Chart options={options} series={graphData} type="area" width="100%" height="350" />
