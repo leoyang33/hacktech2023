@@ -10,22 +10,22 @@ import {
   Divider,
   SvgIcon,
   Grid,
-  Box, 
-  Continer
+  Box,
+  Continer,
 } from "@mui/material";
 import { alpha, useTheme } from "@mui/material/styles";
 import { Chart } from "src/components/chart";
 import dataJson from "../../data/data.json";
 import { useState, useEffect } from "react";
 
-const useChartOptions = () => {
+const useChartOptions = (util) => {
   const theme = useTheme();
 
   const utilMap = {
-    "electric": "custom.gas1",
-    "gas": "custom.gas",
-    "water": "custom.water"
-  }
+    electric: "#ffca3a",
+    gas: "#ff595e",
+    water: "#1982C4",
+  };
 
   return {
     chart: {
@@ -42,7 +42,7 @@ const useChartOptions = () => {
     },
     fill: {
       opacity: 1,
-      type: "solid"
+      type: "solid",
     },
     grid: {
       borderColor: theme.palette.divider,
@@ -62,7 +62,7 @@ const useChartOptions = () => {
       show: false,
     },
     stroke: {
-      colors: ["#000000"],
+      colors: [utilMap[util]],
       show: true,
       width: 2,
     },
@@ -78,20 +78,6 @@ const useChartOptions = () => {
         color: theme.palette.divider,
         show: true,
       },
-      //   categories: [
-      //     "Jan",
-      //     "Feb",
-      //     "Mar",
-      //     "Apr",
-      //     "May",
-      //     "Jun",
-      //     "Jul",
-      //     "Aug",
-      //     "Sep",
-      //     "Oct",
-      //     "Nov",
-      //     "Dec",
-      //   ],
       labels: {
         offsetY: 5,
         style: {
@@ -108,16 +94,19 @@ const useChartOptions = () => {
         },
       },
     },
+    tooltip: {
+      marker: {
+        fillColors: [utilMap[util]], // set marker color to red
+      },
+    },
   };
 };
 
 export const HomepageElectric = (props) => {
   const chartSeries = props.chartSeriesInp;
-  
+  const util = props.util;
   //   const { _, sx } = props;
-  const chartOptions = useChartOptions();
+  const chartOptions = useChartOptions(util);
 
-  return (
-      <Chart options={chartOptions} series={chartSeries} type="line" width="90%" height="350"/>
-  );
+  return <Chart options={chartOptions} series={chartSeries} type="line" width="90%" height="350" />;
 };
