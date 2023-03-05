@@ -15,7 +15,8 @@ import {
   TableCell,
   TableHead,
   TableRow,
-  TableSortLabel
+  TableSortLabel,
+  Typography
 } from '@mui/material';
 import { Scrollbar } from 'src/components/scrollbar';
 import { SeverityPill } from 'src/components/severity-pill';
@@ -94,6 +95,7 @@ export const LeaderboardNeighbourhoodLeaderboard = (props) => {
   return (
     <Card sx={sx}>
       <CardHeader title="Neighborhood Leaderboard" />
+      <Typography variant='body1' paddingLeft={3} paddingBottom={2}>How you rank among your friends</Typography>
       <Scrollbar sx={{ flexGrow: 1 }}>
         <Box>
           <Table>
