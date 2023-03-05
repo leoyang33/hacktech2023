@@ -48,6 +48,40 @@ const Page = () => (
             />
           </Grid>
         </Grid>
+        <Container maxWidth="lg">
+          <Stack spacing={3}>
+          <Typography variant="h4">
+            How you compare
+          </Typography>
+          <Grid xs={4}
+            padding={1}>
+              <GlobalStat
+                text={"You were in the top 10% of electricity savers this month."}
+                title="Electric Savings"
+                type="Electricity"
+                sx={{ height: '100%' }}
+              />
+            </Grid>
+            <Grid xs={4}
+            padding={1}>
+              <GlobalStat
+                text={"You were in the top 15% of water savers this month."}
+                title="Water Savings"
+                type="Water"
+                sx={{ height: '100%' }}
+              />
+            </Grid>
+            <Grid xs={4}
+            padding={1}>
+              <GlobalStat
+                text={"You were in the top 25% of gas savers this month."}
+                title="Gas Savings"
+                type="Gas"
+                sx={{ height: '100%' }}
+              />
+            </Grid>
+            </Stack>
+          </Container>
       </Container>
     </Box>
   </>
