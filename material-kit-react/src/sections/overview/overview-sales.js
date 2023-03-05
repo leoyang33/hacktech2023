@@ -313,8 +313,6 @@ export const OverviewSales = (props) => {
           }
           title="Usage History"
         />
-
-        {graphData.length && graphData[0].data.length}
         <CardContent>
           {check && (
             <Chart options={options} series={graphData} type="area" width="100%" height="350" />
