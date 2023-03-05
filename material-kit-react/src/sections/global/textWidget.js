@@ -80,10 +80,10 @@ export const TextWidget = (props) => {
             <Grid container
             justifyContent='flex-end'
             marginLeft={2}>
-              <FacebookShareButton url={"google.com"} quote="test" hashtag="TODO">
+              <FacebookShareButton url={"Zap.com"} quote="test" hashtag="TODO">
                 <FacebookIcon/>
               </FacebookShareButton>
-              <TwitterShareButton url={"google.com"} hashtags={["ecofriendly"]} title={"From TODO I learned: " + text}>
+              <TwitterShareButton url={"Zap.com"} hashtags={["ecofriendly"]} title={"From TODO I learned: " + text}>
                 <TwitterIcon/>
               </TwitterShareButton>
             </Grid>
