@@ -4,18 +4,16 @@ import { Box, Stack, Container, Typography, Unstable_Grid2 as Grid } from "@mui/
 import { Layout as DashboardLayout } from "src/layouts/dashboard/layout";
 import { LeaderboardBellCurve } from "src/sections/leaderboard/LeaderboardBellCurve";
 import { OverviewSales } from "src/sections/overview/overview-sales";
+import { LeaderboardNeighbourhoodLeaderboard } from "src/sections/leaderboard/leaderboard-neighbourhood-leaderboard";
+import dataJSON from '../data/data.json';
+import usersJSON from '../data/users.json';
+
 import {GlobalStat} from "src/sections/global/globalStat";
 const Page = () => (
   <>
-    {/* <Head>
-      <title>Leaderboard</title>
-    </Head>
-    <p>Here</p>
-    <Chart height={350} options={useChartOptions()} series={chartSeries} type="bar" width="100%" /> */}
     <Head>
       <title>Leaderboard | Zap</title>
     </Head>
-    {/* <LeaderboardBellCurve sx={{ height: "100%" }} /> */}
     <Box
       component="main"
       sx={{
@@ -25,7 +23,12 @@ const Page = () => (
     >
       <Container maxWidth="xl">
         <Grid container spacing={3}>        
-          <Grid xs={12} lg={8}>
+          <Grid xs={12}>
+            <LeaderboardNeighbourhoodLeaderboard
+                  usersJSON = {usersJSON}
+                  dataJSON = {dataJSON}
+                  sx={{ height: '100' }}
+                />
             <OverviewSales
               chartSeries={[
                 {
@@ -41,7 +44,7 @@ const Page = () => (
                   data: [5, 6, 4, 6, 3, 7, 9, 7, 5, 5, 8, 9],
                 },
               ]}
-              sx={{ height: "100%" }}
+              sx={{ height: "100" }}
             />
           </Grid>
         </Grid>
