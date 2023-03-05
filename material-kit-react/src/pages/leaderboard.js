@@ -53,7 +53,8 @@ const Page = () => (
           <Typography variant="h4">
             How you compare
           </Typography>
-          <Grid xs={4}
+          <Grid direction="row">
+          <Grid
             padding={1}>
               <GlobalStat
                 text={"You were in the top 10% of electricity savers this month."}
@@ -62,7 +63,7 @@ const Page = () => (
                 sx={{ height: '100%' }}
               />
             </Grid>
-            <Grid xs={4}
+            <Grid 
             padding={1}>
               <GlobalStat
                 text={"You were in the top 15% of water savers this month."}
@@ -71,7 +72,7 @@ const Page = () => (
                 sx={{ height: '100%' }}
               />
             </Grid>
-            <Grid xs={4}
+            <Grid 
             padding={1}>
               <GlobalStat
                 text={"You were in the top 25% of gas savers this month."}
@@ -79,6 +80,7 @@ const Page = () => (
                 type="Gas"
                 sx={{ height: '100%' }}
               />
+            </Grid>
             </Grid>
             </Stack>
           </Container>
