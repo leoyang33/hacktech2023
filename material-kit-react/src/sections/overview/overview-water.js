@@ -33,7 +33,7 @@ export const OverviewWater = (props) => {
               Water
             </Typography>
             <Typography variant="h5">
-              {value} CCF
+              {value} gal
             </Typography>
           </Stack>
           <Avatar
