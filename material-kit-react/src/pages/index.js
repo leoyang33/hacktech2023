@@ -3,12 +3,8 @@ import { subDays, subHours } from 'date-fns';
 import { Box, Container, Unstable_Grid2 as Grid } from '@mui/material';
 import { Layout as DashboardLayout } from 'src/layouts/dashboard/layout';
 import { OverviewElectricity } from 'src/sections/overview/overview-electricity';
-import { OverviewLatestOrders } from 'src/sections/overview/overview-latest-orders';
-import { OverviewLatestProducts } from 'src/sections/overview/overview-latest-products';
-import { OverviewSales } from 'src/sections/overview/overview-sales';
 import { OverviewGas } from 'src/sections/overview/overview-gas';
 import { OverviewWater } from 'src/sections/overview/overview-water';
-import { OverviewTotalProfit } from 'src/sections/overview/overview-total-profit';
 import { OverviewTraffic } from 'src/sections/overview/overview-traffic';
 import { OverviewTip } from 'src/sections/overview/overview-tip'
 import { OverviewStat } from 'src/sections/overview/overview-stats'
