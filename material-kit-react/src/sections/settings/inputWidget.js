@@ -56,7 +56,7 @@ export const InputWidget = () => {
           >
             <Grid
             container
-            sx={{height: 250}}
+            sx={{height: 230}}
             spacing={3}
             direction="column"
             alignItems="center"
@@ -83,6 +83,7 @@ export const InputWidget = () => {
                 <Button
                   variant="contained"
                   component="label"
+                  sx={{backgroundColor: 'custom.electricity', width:"100%", '&:hover': {backgroundColor: 'custom.electricity3'}}}
                 >
                   Upload Electric Bill
                   <input
@@ -93,7 +94,7 @@ export const InputWidget = () => {
             </Grid>
             <Grid
             container
-            sx={{height: 250}}
+            sx={{height: 230}}
             spacing={3}
             direction="column"
             alignItems="center"
@@ -119,6 +120,8 @@ export const InputWidget = () => {
                 <Button
                   variant="contained"
                   component="label"
+                  sx={{backgroundColor: 'custom.water', width:"100%", '&:hover': {backgroundColor: 'custom.water3'}}}
+
                 >
                   Upload Water Bill
                   <input
@@ -129,7 +132,7 @@ export const InputWidget = () => {
             </Grid>
             <Grid
             container
-            sx={{height: 250}}
+            sx={{height: 230}}
             spacing={3}
             direction="column"
             alignItems="center"
@@ -156,6 +159,7 @@ export const InputWidget = () => {
                 <Button
                   variant="contained"
                   component="label"
+                  sx={{backgroundColor: 'custom.gas', width:"100%", '&:hover': {backgroundColor: 'custom.gas3'}}}
                 >
                   Upload Gas Bill
                   <input

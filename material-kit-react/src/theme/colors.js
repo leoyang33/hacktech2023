@@ -84,5 +84,8 @@ export const custom = {
   gas: '#ff595e',
   electricity2: '#fbebc3',
   gas2: "#fbcace",
-  water2: '#b6d6ec'
+  water2: '#b6d6ec',
+  electricity3: '#c49c2d',
+  gas3: "#9c3a3d",
+  water3: '#0c4e78'
 };
