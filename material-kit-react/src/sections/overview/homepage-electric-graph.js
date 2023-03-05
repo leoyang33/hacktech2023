@@ -9,6 +9,9 @@ import {
   CardHeader,
   Divider,
   SvgIcon,
+  Grid,
+  Box, 
+  Continer
 } from "@mui/material";
 import { alpha, useTheme } from "@mui/material/styles";
 import { Chart } from "src/components/chart";
@@ -17,6 +20,12 @@ import { useState, useEffect } from "react";
 
 const useChartOptions = () => {
   const theme = useTheme();
+
+  const utilMap = {
+    "electric": "custom.gas1",
+    "gas": "custom.gas",
+    "water": "custom.water"
+  }
 
   return {
     chart: {
@@ -33,14 +42,14 @@ const useChartOptions = () => {
     },
     fill: {
       opacity: 1,
-      type: "solid",
+      type: "solid"
     },
     grid: {
       borderColor: theme.palette.divider,
       strokeDashArray: 2,
       xaxis: {
         lines: {
-          show: false,
+          show: true,
         },
       },
       yaxis: {
@@ -52,11 +61,6 @@ const useChartOptions = () => {
     legend: {
       show: false,
     },
-    // plotOptions: {
-    //   bar: {
-    //     columnWidth: "40px",
-    //   },
-    // },
     stroke: {
       colors: ["#000000"],
       show: true,
@@ -97,7 +101,7 @@ const useChartOptions = () => {
     },
     yaxis: {
       labels: {
-        formatter: (value) => (value > 0 ? `${value}K` : `${value}`),
+        formatter: (value) => (value > 0 ? `${value}` : `${value}`),
         offsetX: -10,
         style: {
           colors: theme.palette.text.secondary,
@@ -108,59 +112,12 @@ const useChartOptions = () => {
 };
 
 export const HomepageElectric = (props) => {
-  const chartSeries = [
-    {
-      name: "Electricity",
-      data: [18, 16, 5, 8, 3, 14, 14, 16, 17, 19, 18, 20],
-    },
-    // {
-    //   name: "Water",
-    //   data: [12, 11, 4, 6, 2, 9, 9, 10, 11, 12, 13, 13],
-    // },
-    // {
-    //   name: "Gas",
-    //   data: [5, 6, 4, 6, 3, 7, 9, 7, 5, 5, 8, 9],
-    // },
-  ];
-
+  const chartSeries = props.chartSeriesInp;
+  
   //   const { _, sx } = props;
   const chartOptions = useChartOptions();
 
   return (
-    <Card sx={{ height: "100%" }}>
-      <CardHeader
-        action={
-          <Button
-            color="inherit"
-            size="small"
-            startIcon={
-              <SvgIcon fontSize="small">
-                <ArrowPathIcon />
-              </SvgIcon>
-            }
-          >
-            Sync
-          </Button>
-        }
-        title="Usage History"
-      />
-      <CardContent>
-        <Chart options={chartOptions} series={chartSeries} type="line" width="100%" height="350" />
-      </CardContent>
-      <Divider />
-      <CardActions sx={{ justifyContent: "flex-end" }}>
-        <Button
-          color="inherit"
-          endIcon={
-            <SvgIcon fontSize="small">
-              <ArrowRightIcon />
-            </SvgIcon>
-          }
-          size="small"
-        >
-          Overview
-        </Button>
-      </CardActions>
-    </Card>
+      <Chart options={chartOptions} series={chartSeries} type="line" width="90%" height="350"/>
   );
 };

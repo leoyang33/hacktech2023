@@ -5,6 +5,7 @@ import { InputWidget } from 'src/sections/settings/inputWidget';
 import { Layout as DashboardLayout } from 'src/layouts/dashboard/layout';
 import { GlobalStat } from 'src/sections/global/globalStat'
 import { InteractiveMap } from 'src/sections/map/interactiveMap';
+import { TextWidget } from 'src/sections/global/textWidget';
 
 const Page = () => (
   <>
@@ -61,6 +62,11 @@ const Page = () => (
             </Grid>
           </Grid>
         </Stack>
+      </Container>
+      <Container>
+        <TextWidget
+        title="TEst"
+        text= "butter butter butter"/>
       </Container>
     </Box>
   </>
